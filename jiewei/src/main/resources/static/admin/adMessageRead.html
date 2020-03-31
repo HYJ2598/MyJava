@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--视口的配置信息-->
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="../js/Chart.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <!-- 贾焱鑫加的样式 -->
+    <style>
+        li {
+            list-style: none;
+        }
+
+        textarea {
+            width: 1100px;
+            height: 80px;
+        }
+    </style>
+    <head>
+        <title>我的已回复消息</title>
+    </head>
+    <!--贾焱鑫 按自己理解整合的界面 主要调整了背景色、淡入淡出等这些 加了下class-->
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h3>我的消息</h3>
+            </div>
+
+            <!--标签导航-->
+            <div>
+                <ul class="nav nav-tabs">
+                    <li><a href="adMessage.html">未回复消息</a></li>
+                    <li><a href="adMessageRead.html">已回复消息</a></li>
+                </ul>
+            </div>
+
+            <!--显示所有评论内容-->
+            <div class="media well hidden">
+                <div class="media-body">
+                    <div id="adMessage">
+                        <h3>未回复消息</h3>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media well ">
+                <div class="media-body">
+                    <div id="adMessage2">
+                        <h3>已回复消息</h3>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>-->
+<script>
+
+    /*贾焱鑫 管理员页面 显示所有问题*/
+    $.get('/stuMessage/all', function (r) {
+
+        if (r.code == 0) {
+            stuMessageList = r.data.stuMessageList
+
+            var text = ''
+            var text2 = ''
+
+            for (i in stuMessageList) {
+                // 显示未回复的消息 本页面隐藏
+                if (stuMessageList[i].flag == 0) {
+                    text += `
+                     <form>
+                        <div class="col-lg-12">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action " href="adMessageReply.html?messId=${stuMessageList[i].messId}">${stuMessageList[i].content.substr(0, 95)}</a>
+                        </div>
+                    </form>
+                `
+                } else {
+
+                    // 显示已回复消息
+                    text2 += `
+                     <form>
+                        <div class="col-lg-12">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action" href="adMessageReply.html?messId=${stuMessageList[i].messId}">${stuMessageList[i].content.substr(0, 95)}</a>
+                        </div>
+                    </form>
+                `
+                }
+            }
+
+            $('#adMessage').append(text)
+            $('#adMessage2').append(text2)
+        }
+    }, 'json');
+
+</script>
+
+</html>

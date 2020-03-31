@@ -1,0 +1,138 @@
+<!--管理员上传试题页面-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传试题</title>
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- Morris -->
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+
+
+    </style>
+
+</head>
+
+<body class="gray-bg" id="body">
+<br/>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <a href="Test.html" type="button" class="btn btn-primary"> &nbsp;返回</a>
+
+        <div class="col-lg-3">
+            <div class="page-header">
+                <h3>上传试题&nbsp;
+                </h3>
+            </div>
+        </div>
+        <div class="col-lg-6">
+
+
+
+            <h3>
+                <input type='button' value='添加选项'class="btn-default" onclick='add()'/>
+
+                <input type='button' value='删除选项'class="btn-default" onclick='del()'/>
+            </h3>
+
+
+
+            <form class="table table-hover table-striped" >
+                <tr><label for="" class="control-label">试题序号</label></tr>
+                <tr><input type="text" class="form-control"  name="sort"/></tr>
+                <tr><label for="" class="control-label">题目</label></tr>
+                <tr><input type="text" class="form-control"  name="ques"/></tr>
+               <!-- <tr><label for="" class="control-label">正确答案</label></tr>
+                <tr><input type="text" class="form-control"  name="answer"/></tr>-->
+                <tr><label for="" class="control-label" id="course">所属课程</label></tr>
+                <tr><input type="text" class="" placeholder="课程ID" name="cou_id"/></tr>
+                <tr><input type="text" class="form-control" placeholder="解析" name="ana"/></tr>
+                <div id="buttons"></div>
+            </form>
+
+
+            <script>
+                var xuanxiang=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+                var xuan=0;
+                function add(){
+                    if (xuan>25){
+                        alert("客官，不能再多了！");
+                        return;}
+
+                    var buttons = document.getElementById('buttons');
+                    buttons.innerHTML += ("<label for=''>"+xuanxiang[xuan]+"</label>");
+                    buttons.innerHTML += ("<input type='checkbox'name='answer'value='"+xuanxiang[xuan]+"'checked/>");
+                    buttons.innerHTML += ("<input type='text'class='form-control' name='optio'/>");
+                    xuan=xuan+1;
+                }
+
+                function del(){
+                    if (xuan==0){
+                        alert("客官，这个真没有！");
+                        return;}
+                    xuan=xuan-1;
+                    var buttons = document.getElementById('buttons');
+                    var labels =buttons.getElementsByTagName('label');
+                    var inputs =buttons.getElementsByTagName('input');
+                    labels[labels.length-1].remove();
+                    inputs[inputs.length-1].remove();
+                    inputs[inputs.length-1].remove();
+                }
+            </script>
+
+
+            <center><a href="Test.html"><input type="button" class="btn btn-primary" name="sure" id="btn" value="确定" onclick="accessNeteasy()"/></a>
+
+                <a href="Test.html"><input type="button" class="btn btn-primary" name="sure" id="btn1" value="取消" onclick="javaScript:confirm('您确定取消吗？')"/></a>
+            </center>
+
+            <script src="../js/jquery-3.3.1.js"></script>
+
+            <script language="javascript">
+                function accessNeteasy()
+                {
+                    alert($('form').serialize() );
+                    console.log($('form').serialize())
+                    if(confirm('您确定添加试题吗？')) {
+                        $.post('/test/add', $('form').serialize() ,'json')
+                    }
+
+                }
+            </script>
+
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- 全局js -->
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+<!-- 自定义js -->
+<script src="js/content.js?v=1.0.0"></script>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<!--统计代码，可删除-->
+
+
+</body>
+
+</html>

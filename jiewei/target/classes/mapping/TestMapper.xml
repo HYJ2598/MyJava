@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjs.tyust.edu.cn.jiewei.mapper.TestMapper">
+
+    <!--<select id="testSelectallByid" resultType="com.example.demo.entity.Test">
+        select *
+            from test
+              where cou_id=1 group by cou_id , sort;
+    </select>
+    <select id="testCountSelectById" resultType="java.lang.Integer">
+        select COUNT(sort)
+            from test
+                WHERE cou_id=1
+                    GROUP BY cou_id;
+    </select>-->
+    <!--高强-->
+    <!--根据cou_id查询试题和所属课程的试题总数-->
+    <!--根据cou_id查询试题总数-->
+    <select id="testCountSelectById" resultType="java.lang.Integer">
+        select COUNT(sort)
+            from test
+                WHERE cou_id=#{couId}
+                    GROUP BY cou_id;
+    </select>
+    <!--根据cou_id查询试题-->
+    <select id="testSelectallByid" resultType="yjs.tyust.edu.cn.jiewei.entity.Test">
+        select *
+            from test
+              where cou_id=#{couId} group by cou_id,sort;
+    </select>
+    <!--张乐-->
+    <!--上传试题-->
+    <insert id="uplodeText" parameterType="yjs.tyust.edu.cn.jiewei.entity.Test">
+        insert into test(sort,ques,answer,cou_id,ana,optiongroup) values(#{sort,jdbcType=INTEGER},#{ques,jdbcType=VARCHAR},#{answer,jdbcType=VARCHAR},#{cou_id,jdbcType=INTEGER},#{ana,jdbcType=VARCHAR},#{optiongroup,jdbcType=VARCHAR});
+    </insert>
+
+    <!--实体属性与数据库字段对应-->
+    <!--<resultMap id="textResult" type="yjs.tyust.edu.cn.jiewei.entity.Test">
+        <id property="testId" column="test_id"/>
+        <result property="ques" column="ques"/>
+        <result property="answer" column="answer"/>
+        <collection property="course" ofType="yjs.tyust.edu.cn.jiewei.entity.Course">
+            <id property="couId" column="cou_id"/>
+            <result property="couName" column="cou_name"/>
+        </collection>
+    </resultMap>-->
+
+    <!--  查询全部
+    <select id="text" resultMap="textResult" >
+        select test.test_id,test.ques,course.cou_name,test.answer
+        from test
+        left join course on course.cou_id = test.cou_id;
+
+    </select>-->
+
+    <!--//按课程名与题目名模糊搜索-->
+    <!--<select id="selectByQues" resultMap="textResult">
+       select test.test_id,test.ques,course.cou_name,test.answer
+        from test,course where course.cou_id = test.cou_id
+            and course.cou_name like CONCAT('%',#{couName},'%') and test.ques like CONCAT('%',#{ques},'%');
+
+    </select>-->
+
+    <!--杨芬玉-->
+    <!--    将java实体中的属性名和数据库表中字段名对应起来-->
+    <resultMap id="textResult" type="yjs.tyust.edu.cn.jiewei.entity.Test">
+        <id property="testId" column="test_id"/>
+        <result property="ques" column="ques"/>
+        <result property="answer" column="answer"/>
+        <collection property="course" ofType="yjs.tyust.edu.cn.jiewei.entity.Course">
+            <id property="couId" column="cou_id"/>
+            <result property="couName" column="cou_name"/>
+        </collection>
+    </resultMap>
+
+    <!--杨芬玉-->
+    <!--从test和course表中查询，#{couId}是接受页面传过来的课程ID-->
+    <select id="selectByQuesl" resultMap="textResult">
+      select test.test_id,test.ques,course.cou_name,test.answer
+        from test,course
+        where course.cou_id = test.cou_id
+        and test.cou_id=#{couId};
+    </select>
+</mapper>

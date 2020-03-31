@@ -1,0 +1,76 @@
+h1{
+    font-family: kaiti;
+}
+ul{
+    list-style: none;
+    /*border: ;*/
+}
+li{
+    display: block;
+    color:#000;
+    line-height: 90px;
+    text-align: center;
+    border: 1px solid #EAEAEA;
+    cursor: pointer;
+
+}
+.selectLi{
+    color: #FFFFFF;
+    background: url("../images/jiantou.png");
+    background-size: 100% 100%;
+}
+/*li:hover{*/
+/*background-color: #F27048;*/
+/*color: white;*/
+/*}*/
+a:link{
+    text-decoration: none;
+}
+.xueshi{
+    margin: 15px 0 0;
+}
+
+.ksks{
+    text-align: center;
+    display: block;
+    width: 90px;
+    height: 37px;
+    line-height: 37px;
+    border-radius: 2px;
+    background-color: #117FBA;
+    color: white;
+    font-size: 16px;
+}
+.kaoshitrue,.add_course{
+    text-align: center;
+    display: block;
+    width: 90px;
+    height: 37px;
+    line-height: 37px;
+    border-radius: 2px;
+    background-color: #117FBA;
+    color: white;
+    font-size: 16px;
+}
+.ccst,.del_course{
+    text-align: center;
+    display: block;
+    width: 90px;
+    height: 37px;
+    line-height: 37px;
+    border-radius: 2px;
+    background-color: #F27048;
+    color: white;
+    font-size: 16px;
+}
+.kaoshifail{
+    text-align: center;
+    display: block;
+    width: 90px;
+    height: 37px;
+    line-height: 37px;
+    border-radius: 2px;
+    background-color: gray;
+    color: white;
+    font-size: 16px;
+}

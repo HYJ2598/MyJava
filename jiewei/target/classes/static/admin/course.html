@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>课程管理</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <!--<link href="css/font-awesome.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash; Morris &ndash;&gt;-->
+    <!--<link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">-->
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h3>课程管理 &nbsp;
+                        <a href="AddCourse.html"><button class="btn-primary">添加</button></a></h3>
+                    <center>
+                        <form role="search" class="navbar-form form-group-lg" method="get" id="searchAll" action="">
+                            <div class="form-group">
+                                <table1>
+                                <tr>
+                                   <h4><td>课程ID<input type="text"class="iptId" id="iptId" name="couId" value=""/>
+                                        &nbsp;&nbsp;课程名<input type="text"class="" name="couName" id="couName"/>&nbsp;&nbsp;教师<input type="text" id="teacher" name="teacher" class=""&nbsp;&nbsp;>
+                                       &nbsp;
+                                       <button class="btn-primary" id="search" >搜索</button>
+                                    </td></h4>
+                                </tr>
+                                </table1>
+                            </div>
+                        </form>
+                    </center>
+                </div>
+                <table class="table table-hover table-striped" id="table">
+                    <thread>
+                        <tr>
+                            <td>课程ID</td>
+                            <td>课程名称</td>
+                            <td>课程详情</td>
+                            <td>讲义</td>
+                            <td>老师</td>
+                            <!--<td>学分</td>-->
+                            <td>操作</td>
+                        </tr>
+                    </thread>
+                    <tbody id="mytable">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="../js/content.js"></script>
+
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+
+        $.get('/course/list', function (r) {
+            for (i = 0; i < r.length; i++) {
+                str = `
+               <tr>
+                    <td>${r[i]['couId']}</td>
+                    <td>${r[i]['couName']}</td>
+                    <!--<td>${r[i]['couInf']}</td>-->
+                    <!--<td>${r[i]['note']}</td>-->
+                    <td><button class="btn-group"><a href="courseInf.html?id=${r[i]['couId']}">详情</a></button>
+                    <td><button class="btn-group"><a href="uplodeJiangyi.html?id=${r[i]['couId']}" >上传</a></button>
+                    <td>${r[i]['teacher']}</td>
+
+
+                    <td>
+                            <li class="dropdown">
+                                <a href="" type="button" data-toggle="dropdown">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="glyphicon glyphicon-adjust" onclick="removeThis(${r[i]['couId']},this)">&nbsp;删除</a></li>
+                                    <li><a href="AlterCourse.html?id=${r[i]['couId']}" class="glyphicon glyphicon-adjust">&nbsp;修改</a></li>
+                                    <li><a href="checkExam.html?id=${r[i]['couId']}" class="glyphicon glyphicon-adjust">&nbsp;查看试题</a></li>
+                                </ul>
+                            </li>
+                        </td>
+
+                </tr>
+            `
+                $('table').append(str)
+            }
+        }, 'json')
+
+
+
+    function removeThis(id,o) {
+
+        if(confirm("确定删除?")){
+            //ajax 发送要删除的id
+            $.post('/course/remove/'+id,function (r) {
+                if(r){
+                    //window.location.href("course.html?a=1");
+                    alert("删除成功")
+                    $(o).parent().parent().parent().parent().remove()
+                }else{
+                    alert("删除失败")
+                }
+            },'json');
+        }
+    }
+
+    function flush(){
+        //var id = document.getElementById("iptId")
+        $.ajax({
+            type: 'post',
+            url: '/course/find2/',
+            // data: {id: id.value},
+            data:$("#searchAll").serialize(),
+            dataType: 'json',
+            success: function (r) {
+                // $('table').html('')
+                $("#table tr:not(:first)").empty("");
+                for (i = 0; i < r.length; i++) {
+                    str = `
+                           <tr>
+                                <td>${r[i]['couId']}</td>
+                                <td>${r[i]['couName']}</td>
+                                <td>${r[i]['couInf']}</td>
+                                <td>${r[i]['note']}</td>
+                                <td>${r[i]['teacher']}</td>
+                                <!--<td>${r[i]['couName']}</td>-->
+                                <td>
+                                        <li class="dropdown">
+                                            <a href="" type="button" data-toggle="dropdown">
+                                                操作
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="" class="glyphicon glyphicon-adjust" onclick="removeThis(${r[i]['couId']},this)">&nbsp;删除</a></li>
+                                                <li><a href="AlterCourse.html?id=${r[i]['couId']}" class="glyphicon glyphicon-adjust">&nbsp;修改</a></li>
+                                            </ul>
+                                        </li>
+                                    </td>
+
+                            </tr>
+                        `
+
+                    $('#mytable').append(str)
+                }
+            }
+
+        })
+    }
+
+    $('#search').click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'post',
+            url: '/course/find2/',
+            // data: {id: id.value},
+            data:$("#searchAll").serialize(),
+            dataType: 'json',
+            success: function (r) {
+                // $('table').html('')
+                $("#table tr:not(:first)").empty("");
+                for (i = 0; i < r.length; i++) {
+                    str = `
+                           <tr>
+                                <td>${r[i]['couId']}</td>
+                                <td>${r[i]['couName']}</td>
+                                <td>${r[i]['couInf']}</td>
+                                <td>${r[i]['note']}</td>
+                                <td>${r[i]['teacher']}</td>
+                                <!--<td>${r[i]['couName']}</td>-->
+                                <td>
+                                        <li class="dropdown">
+                                            <a href="" type="button" data-toggle="dropdown">
+                                                操作
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="" class="glyphicon glyphicon-adjust" onclick="removeThis(${r[i]['couId']},this)">&nbsp;删除</a></li>
+                                                <li><a href="AlterCourse.html?id=${r[i]['couId']}" class="glyphicon glyphicon-adjust">&nbsp;修改</a></li>
+                                            </ul>
+                                        </li>
+                                    </td>
+
+                            </tr>
+                        `
+
+                    $('#mytable').append(str)
+                }
+            }
+
+        })
+        //flush()
+    })
+
+        // $('#iptId').bind('input propertychange', function() {
+        //     flush();
+        // });
+        // $('#couName').bind('input propertychange', function() {
+        //     flush();
+        // });
+        // $('#teacher').bind('input propertychange', function() {
+        //     flush();
+        // });
+</script>
+    </html>

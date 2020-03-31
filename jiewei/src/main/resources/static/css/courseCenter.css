@@ -1,0 +1,51 @@
+.panel-heading {
+    min-width: 300px;
+    height: 55px;
+    padding: 0 15px;
+    align-items: center;
+}
+.panel-heading label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: 400;
+}
+label input {
+    width: 150px;
+    border-radius: 2px;
+    outline-style: none;
+    border: 1px solid #000;
+    padding: 0 10px;
+    font-size: 12px;
+    height: 30px;
+}
+.panel-title {
+    line-height: 55px;
+    flex: 1;
+    width: 150px;
+}
+.panel-body {
+    overflow-x: auto;
+}
+table tr td {
+    padding: 8px 0 !important;
+}
+tr td:first-child p {
+    width: 10em;
+    margin: 15px 0 0 20px !important;
+}
+tr td .w5 {
+    width: 5em;
+}
+tr td .w4 {
+    width: 4em;
+}
+tr td .w3 {
+    width: 3em;
+}
+tr td .w2 {
+    width: 2em;
+}
+.del_course, .add_course {
+    margin: 0 5px;
+}

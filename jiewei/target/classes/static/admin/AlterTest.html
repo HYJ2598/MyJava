@@ -1,0 +1,119 @@
+<!--管理员修改试题页面-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>修改试题</title>
+
+    <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<br/>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <a href="Test.html" type="button" class="btn btn-primary"> &nbsp;返回</a>
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-6">
+            <div class="page-header">
+                <h3>修改试题&nbsp;</h3>
+            </div>
+            <form class="table table-hover table-striped">
+                <input type="hidden" name="testId">
+                <tr>
+                    <td><label for="" class="control-label">题目</label></td>
+                    <td><input type="text" class="form-control"  name="ques"/></td>
+                </tr>
+                <tr>
+                    <td><label for="" class="control-label">选项</label></td>
+                    <td><input type="text" class="form-control"  name="optiongroup"/></td>
+
+                </tr>
+                <tr>
+                    <td><label for="" class="control-label">解析</label></td>
+                    <td><input type="text" class="form-control"  name="ana"/></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="" class="control-label">正确答案</label></td>
+                    <td><input type="text" class="form-control"  name="answer"/></td>
+                    </td>
+                </tr>
+             <!--   <input type="button" id="sub" value="提交">-->
+
+            </form>
+
+            <center>
+                <a href="Test.html"><input type="button" class="btn btn-primary" name="sure" id="sub" value="确定" onclick="updateSure()"/></a>
+
+                <a href="Test.html"><input type="button" class="btn btn-primary" name="sure" id="btn1" value="取消" onclick="javaScript:confirm('您确定取消吗？')"/></a>
+            </center>
+
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    id = location.href.split("?")[1].split("=")[1]
+    /*从数据库获取试题  显示到页面*/
+    $.get('/test/getText/'+id,function (r) {
+        $('[name=testId]').val(r.testId)
+        $('[name=ques]').val(r.ques)
+        $('[name=optiongroup]').val(r.optiongroup)
+        $('[name=ana]').val(r.ana)
+        $('[name=answer]').val(r.answer)
+
+    },'json')
+    /*修改试题*/
+    function updateSure(){
+        if(confirm('您确定修改试题吗？')) {
+            $.post('/test/update', $('form').serialize(),'json')
+        }
+    }
+
+</script>
+
+<!-- 全局js -->
+<script src="../js/jquery.min.js?v=2.1.4"></script>
+<script src="../js/bootstrap.min.js?v=3.3.6"></script>
+
+<!-- 自定义js -->
+<script src="../js/content.js?v=1.0.0"></script>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<!--统计代码，可删除-->
+
+
+</body>
+
+</html>

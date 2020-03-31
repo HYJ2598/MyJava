@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<h1>添加讲义</h1>
+<a href="course.html">返回</a>
+<br>
+<button type="button" class="layui-btn" id="test1"><i class="layui-icon"></i>上传讲义</button>
+<br>
+
+<br>
+<form>
+    <input type="hidden" name="couId">
+<!--    <label for="">讲义地址</label>-->
+<!--    <br>-->
+    <input type="hidden" name="note">
+    <br>
+    <label for="">讲义介绍</label>
+    <br>
+    <input type="text" name="notInf" id="notInf">
+    <br>
+    <input id="sub" type="button" value="提交">
+</form>
+<script src="../layui/layui.js"></script>
+<script>
+    //上传layui，调用FileController中的upload方法 BY 徐超 BY 徐超
+    //只改elem，url，accept其他不变
+    layui.use('upload', function(){
+        var upload = layui.upload
+        var $ =layui.jquery
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#test1' //绑定元素
+            ,url: '/upload' //上传接口 BY 徐超
+            ,accept:'file'//限制上传文件类型
+            ,done: function(res){
+                //上传完毕回调
+                console.log(res)
+                $('[name=note]').val(res.data.src)
+                //如果上传失败
+                if(res.code > 0){
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+    });
+</script>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    id=location.href.split("?")[1].split("=")[1]
+    // alert(id)
+    $.get('/course/getById/'+id,function (r) {
+        $('[name=couId]').val(r.couId)
+    },'json')
+
+    $('#sub').click(function () {
+        alert($('form').serialize())
+        $.post('/course/update/',$('form').serialize(),function (r) {
+            if(r){
+                alert('添加讲义成功')
+            }else{
+                alert('添加讲义失败')
+            }
+        },'json')
+    })
+</script>
+</html>

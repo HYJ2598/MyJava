@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>视频管理</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <!--<link href="css/font-awesome.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash; Morris &ndash;&gt;-->
+    <!--<link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">-->
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h3>视频管理 &nbsp;
+                    <a href="uploadvideo.html"><button class="btn-primary">上传</button></a></h3>
+                <center>
+                    <form role="search" class="navbar-form form-group-lg" method="get" id="searchAll" action="">
+                        <div class="form-group">
+                            <table1>
+                                <tr>
+                                    <h4><td><!--课程ID<input type="text"class="couId" id="couId" name="couId" value=""/>
+                                        &nbsp;&nbsp;课程名<input type="text"class="" name="couName" id="couName"/>&nbsp;&nbsp;教师<input type="text" id="teacher" name="teacher" class=""&nbsp;&nbsp;>
+                                        &nbsp;
+                                        <button class="btn-primary" id="search" >搜索</button>-->
+                                        <label for="">所属课程</label>
+                                        <input type="text" name="couId" id="couId">
+
+                                        <a href="javascript:;" onclick="check()">验证</a>
+                                        <input type="text" name="couName" id="couName">
+                                        <input type="text" name="teacher" id="teacher">
+                                        <input id="sub" type="button" value="搜索">
+                                    </td></h4>
+                                </tr>
+                            </table1>
+                        </div>
+                    </form>
+                </center>
+            </div>
+            <table class="table table-hover table-striped" >
+                <thread>
+                    <tr>
+                        <td>序号</td>
+                        <td>视频名称</td>
+                        <td>视频时长</td>
+                        <td>所属课程</td>
+                        <td>操作</td>
+                    </tr>
+                </thread>
+                <tbody id="tableId">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- 全局js -->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- 自定义js -->
+<script src="../js/content.js"></script>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+
+
+</body>
+<!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>-->
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    // alert($)
+    $('#sub').click(function () {
+        id=document.getElementById("couId").value;
+        // alert(id)
+        /*var table = document.getElementById("tableId");
+        var tableLength = table.rows.length;
+        for(var int = 1;int < tableLength;int++) {
+            table.deleteRow(1);
+        }*/
+        $('#tableId').empty();
+        $.get('/video/list/'+id,function(r){//调用videoController中的list方法，返回r为查询到的video列表 BY 徐超
+
+            for (i=0;i<r.length;i++){
+                str=`
+                <tr>
+                    <td>${r[i]['sort']}</td>
+                    <td>${r[i]['vidName']}</td>
+                    <td>${r[i]['hour']}</td>
+                    <td>${r[i]['couId']}</td>
+                    <td><a href="editVideo.html?id=${r[i]['vidId']}">编辑</a> <a href="javascript:;" onclick="removeThis(${r[i]['vidId']},this)">删除</a></td>
+                </tr>
+            `
+                $('#tableId').append(str)
+            }
+        },'json')
+    })
+
+
+    function removeThis(id,o) {
+
+        // alert(id)
+        if(confirm("确定删除？"))
+        {
+            $.get('/video/remove/' + id, function (r) {//调用videoController中的remove方法，返回r为真假 BY 徐超
+                if (r) {
+                    alert("删除成功");
+                    $(o).parent().parent().remove();
+                } else {
+                    alert("删除失败")
+                }
+            }, 'json');
+        }
+    }
+
+
+
+    function check() {
+        var value = document.getElementById("couId").value;
+        alert("查询中，没有将不显示内容")
+        document.getElementById("couName").value = "";
+        document.getElementById("teacher").value = "";
+        $.get('/course/check/'+value,function (r) {//调用courseController中的check方法，返回r为一个course BY 徐超
+            if (r.couId==value) {
+
+                alert("查询成功");
+                // alert(r.couName)
+                document.getElementById("couName").value = r.couName;
+                document.getElementById("teacher").value = r.teacher;
+            } else{
+                document.getElementById("couName").value = "没有此课程";
+            }
+        }, 'json');
+    }
+</script>
+</html>

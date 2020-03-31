@@ -1,0 +1,62 @@
+.bg{
+    border: 1px solid white;
+}
+
+/*头部*/
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #337AB7;
+}
+/*头部字体样式*/
+.header_word{
+    margin-left: 50px;
+    color: white;
+    font-size: 20px;
+    line-height: 70px;
+}
+
+/*视频题目*/
+.video_title{
+    width: 100%;
+    height: 60px;
+}
+
+/*视频题目处按钮*/
+.video_title_btn {
+    background-color: inherit;
+    font-size: 20px;
+    margin-left: 20px;
+    line-height: 60px;
+    border: none;
+}
+
+/*视频题目处文本框*/
+.video_title_txt{
+    background-color: inherit;
+    border: none;
+    margin-left: 10px;
+    text-align: center;
+    font-size:18px ;
+    line-height: 50px;
+}
+
+#progressWrap {
+    background-color:white;
+    height:100%;
+    width: 100%;
+}
+#playProgress {
+    background-color:green;
+    width:0px;
+    height:100%;
+    border-right:2px solid blue;
+}
+#showProgress {
+    font-weight:600;
+    font-size:20px;
+    line-height:25px;
+}
+#video::-webkit-media-controls{
+    display:none !important;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>学员管理</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="container">
+    <div class="row">
+        <a href="student_list.html" type="button" class="btn btn-primary "> &nbsp;返回</a>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-7 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+            <h3 class="modal-title">添加学生信息</h3>
+            <form action="/dent/add" class="wizard-big">
+                <fieldset>
+                    <h1></h1>
+                    <h1></h1>
+                <!--    <div class="form-group">
+                        <label  class="control-label">学生编号</label>
+                        <input type="text" class="form-control" name="stuId"/>
+                    </div>-->
+                    <div class="form-group">
+                        <label  class="control-label">学生姓名</label>
+                        <input type="text" class="form-control"name="stuName"/>
+                    </div>
+                    <div class="form-group">
+                        <label  class="control-label">身份证</label>
+                        <input type="text" class="form-control" name="idcard"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="control-label">单位</label>
+                        <input type="text" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="control-label">交费</label>
+                        <select name="交费" id="">
+                            <option value="未交费">未交费</option>
+                            <option value="已交费">已交费</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+<!--                        <button type="reset" class="btn btn-primary"data-toggle="modal" data-target="#myModall"id="sub">添加</button>-->
+                        <input type="button" id="sub" value="添加">
+                    </div>
+
+                </fieldset>
+            </form>
+            <!--表单显示各个信息结束-->
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    //成彦颖
+    $('#sub').click(function () {
+          alert($('form').serialize())
+        $.post('/student/add',$('form').serialize(),function (r) {
+            if(r){
+                alert("添加成功")
+                window.location.href = "student_list.html?id="+id;
+            }else{
+                alert("添加失败")
+                window.location.href = "student_list.html?id="+id;
+            }
+        },'json')
+    })
+
+
+
+
+</script>
+
+
+
+</html>

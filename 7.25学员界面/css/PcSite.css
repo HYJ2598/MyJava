@@ -1,0 +1,336 @@
+html{font-family: sans-serif;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;word-wrap:break-word}
+body{font:12px/1.5 "Microsoft YaHei",\5b8b\4f53,Arial,sans-serif;background:#fff;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block;}
+code,kbd,pre,samp {font-family: monospace, monospace;font-size: 1em;}
+button,input,optgroup,select,textarea {margin: 0;font: inherit;color: inherit;}
+hr {height: 0;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}
+sub,sup {position: relative;font-size: 75%;line-height: 0;vertical-align: baseline}
+sup {top: -.5em}
+sub {bottom: -.25em}
+img{border:none; max-width:100%; width:auto}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+input,label,img,th{vertical-align:middle}
+input{	outline:none}
+ul,ol,li{list-style:none}
+a{text-decoration:none;background: transparent}
+a:hover,a:active{text-decoration:none}
+audio,canvas,progress,video {display: inline-block;vertical-align: baseline}
+abbr[title] {border-bottom: 1px dotted}
+pre {overflow: auto}
+button,html input[type="button"],input[type="reset"],input[type="submit"] {-webkit-appearance: button;cursor: pointer}
+fieldset {padding: .35em .625em .75em;margin: 0 2px;border: 1px solid #c0c0c0}
+legend {padding: 0;border: 0}
+textarea {overflow: auto}
+optgroup {font-weight: bold}
+table{border-collapse:collapse;border-spacing:0}
+/*通用样式*/
+.clearfix:after,clearfix:before{display:table;content:" ";}
+.clearfix:after,.clear{clear:both}
+
+
+/*页面开始*/
+.header{	height:130px}
+.box{	width:1200px; margin:0 auto; overflow:hidden}
+
+/*全部主页-左侧导航样式*/
+.main{	background:#eef0f4; padding:0 0 45px}
+
+.content{	padding:23px 0 0}
+.content-lf{	width:225px; float:left; background:#fff; border:#eaeaea 1px solid; position:relative; padding:5px; font-size:18px;}
+.content-lf ul{	}
+.content-lf ul li{	 line-height:75px; width:237px}
+.content-lf ul li a{	border-bottom:1px #e9e8ee solid; width:214px; *width:142px; display:block; color:#6b6b6b;  padding:0 0 0 78px; overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.content-lf-icon1,
+.content-lf-icon2,
+.content-lf-icon3,
+.content-lf-icon4,
+.content-lf-icon5,
+.content-lf-icon6,
+.content-lf-icon7,
+.content-lf-icon8{	background:url(../img/bg_14.png) no-repeat 28px 32px}
+
+.content-lf ul li a.content-lf-icon2{	background-position:28px -45px;}
+.content-lf ul li a.content-lf-icon3{	background-position:28px -116px;}
+.content-lf ul li a.content-lf-icon4{	background-position:28px -193px;}
+.content-lf ul li a.content-lf-icon5{	background-position:28px -266px;}
+.content-lf ul li a.content-lf-icon6{	background-position:28px -342px;}
+.content-lf ul li a.content-lf-icon7{	background-position:28px -414px;}
+.content-lf ul li a.content-lf-icon8{	background-position:28px -489px;}
+
+.content-lf ul li:hover,.content-lf ul li.on{	background:url(../img/bg_16.png) no-repeat 0 58%;}
+.content-lf ul li:hover a,.content-lf ul li.on a{	color:#fff}
+.content-lf ul li:hover a.content-lf-icon1,
+.content-lf ul li:hover a.content-lf-icon2,
+.content-lf ul li:hover a.content-lf-icon3,
+.content-lf ul li:hover a.content-lf-icon4,
+.content-lf ul li:hover a.content-lf-icon5,
+.content-lf ul li:hover a.content-lf-icon6,
+.content-lf ul li:hover a.content-lf-icon7,
+.content-lf ul li:hover a.content-lf-icon8,
+.content-lf ul li.on a.content-lf-icon1,
+.content-lf ul li.on a.content-lf-icon2,
+.content-lf ul li.on a.content-lf-icon3,
+.content-lf ul li.on a.content-lf-icon4,
+.content-lf ul li.on a.content-lf-icon5,
+.content-lf ul li.on a.content-lf-icon6,
+.content-lf ul li.on a.content-lf-icon7,
+.content-lf ul li.on a.content-lf-icon8{	background:url(../img/bg_15.png) no-repeat 28px 30px;}
+.content-lf ul li:hover a.content-lf-icon2,.content-lf ul li.on a.content-lf-icon2{	background-position:28px -45px;}
+.content-lf ul li:hover a.content-lf-icon3,.content-lf ul li.on a.content-lf-icon3{	background-position:28px -116px;}
+.content-lf ul li:hover a.content-lf-icon4,.content-lf ul li.on a.content-lf-icon4{	background-position:28px -193px;}
+.content-lf ul li:hover a.content-lf-icon5,.content-lf ul li.on a.content-lf-icon5{	background-position:28px -266px;}
+.content-lf ul li:hover a.content-lf-icon6,.content-lf ul li.on a.content-lf-icon6{	background-position:28px -342px;}
+.content-lf ul li:hover a.content-lf-icon7,.content-lf ul li.on a.content-lf-icon7{	background-position:28px -414px;}
+.content-lf ul li:hover a.content-lf-icon8,.content-lf ul li.on a.content-lf-icon8{	background-position:28px -489px;}
+
+.content-rg{	width:949px; float:right; }
+
+/*全部主页-右侧样式*/
+.content-rg .xxbg{	background:#fff; padding:30px 30px 30px 0; margin:0 0 20px}
+.content-rg .xxbg .xxbg-top{	background:url(../img/bg_18.png) no-repeat 0px 7px; padding:0 0 0 30px}
+.content-rg .xxbg .xxbg-top .span1{	font-size:20px; margin:0 25px 0 0}
+/*其他年度课程样式*/
+.sel_btn
+{
+    font-size: 14px;
+    /*background: #48acf2;*/
+    color: #0a60a4;
+    padding: 4px 12px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+/*.sel_btn:hover
+{
+    font-size: 14px;
+    background: #3179c3;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 5px;
+    margin: 0 10px;
+}*/
+.checkyear
+{
+    background: #3179c3;
+    color: #fff;
+}
+.sel_btn1, .sel_btn1:hover
+{
+    font-size: 14px;
+   /* background: #f27048;*/
+    color:#0a60a4 ;
+    padding: 4px 12px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+.content-rg .xxbg .xxbg-top .span2{	text-align:center;}
+.content-rg .xxbg .xxbg-top .span2 select{	width:175px; height:35px; *height:27px; line-height:35px; font-size:16px; color:#666666}
+.content-rg .xxbg .xxbg-top .span3{	float:right; color:#8a8a8a; font-size:14px;}
+.content-rg .xxbg .xxbg-top .span3 a{	color:#8a8a8a}
+.content-rg .xxbg .xxbg-center{	margin:60px 0}
+.content-rg .xxbg .xxbg-center ul{	overflow:hidden}
+.content-rg .xxbg .xxbg-center ul li{	width:25%; *width:24%; float:left; text-align:center; border-right:2px #dcdcdc solid}
+.content-rg .xxbg .xxbg-center ul li.li2{	border:none}
+.content-rg .xxbg .xxbg-center ul li span{	color:#3179c3; font-size:34px; font-weight:bold; display:block; margin:0 0 15px}
+.content-rg .xxbg .xxbg-center ul li p{	color:#666666; font-size:16px;}
+.content-rg .xxbg .xxbg-bt{	width:90%; margin:0 auto; text-align:center; background:#eef0f4; font-size:16px; color:#666666; padding:18px 0}
+.content-rg .xxbg .xxbg-bt a{	background:#f27048; color:#fff; padding:8px 12px; border-radius:5px; margin:0 10px}
+
+.zjxx{	padding:30px;}
+.zjxx div.list1{padding:14px;border:1px #d2d2d2 solid}
+.zjxx div table{	width:100%}
+.zjxx div table td.td1{	width:185px;}
+/*table td img{ width:185px; height:108px}*/
+.zjxx div table td.td2{	width:480px;}
+.zjxx div table td h5{	font-size:16px; color:#333333; margin:0 0 0 10px}
+.zjxx div table td .jindu{	overflow:hidden; margin:20px 0 0 10px}
+.zjxx div table td .jindu span{	display:block; float:left}
+.zjxx div table td .jindu .span1{	color:#8a8a8a; font-size:14px; width:40px; }
+.zjxx div table td .jindu .span2{	height:17px; background:#c4c4c4; width:230px}
+.zjxx div table td .jindu .span2 div{	background:#5ab0ff; width:50%; height:17px; line-height:17px; color:#fff; padding:0 10% 0 0; text-align:right}
+.zjxx div table td .renshu{	margin:15px 0 0 10px; font-size:14px; }
+.zjxx div table td .renshu span{	color:#48acf2; font-weight:bold}
+.zjxx div table td a.link1{	text-align:center; height:37px; line-height:37px; display:block; color:#fff; background:#f27048; font-size:16px;}
+
+.zjxx div.list2{}
+.zjxx div.list2 table{	/*border-collapse:separate; border-spacing: 0 30px;*/}
+.zjxx div.list2 table tr{	border-bottom:1px #d2d2d2 solid; height:150px; padding:15px 0}
+.zjxx div table td .xuetime{	margin:15px 0 0}
+.zjxx div table td .xuetime span{	color:#8a8a8a; font-size:14px; margin:0 10px}
+.zjxx div table td span.zt{	text-align:center;width:164px; height:37px; line-height:37px; display:block; border:1px #e7e7e7 solid; font-size:14px; margin:0 0 10px}
+.zjxx div table td span.zt em.em1{	font-weight:bold; font-style:normal;}
+.zjxx div table td a.link2{	text-align:center; width:164px; height:37px; line-height:37px; display:block; color:#fff; background:#48acf2; font-size:16px;}
+
+
+/*分页*/
+.pages{text-align:center;padding:36px 0 70px;}
+.pages a{border:1px solid #dddddd;padding:6px 12px;border-radius:4px;background:#fff;color:#666666}
+.pages .current{border:1px solid #f27048;padding:6px 12px;border-radius:4px;background:#f27048;color:#fff}
+.pages .active{border:1px solid #dddddd;padding:6px 12px;border-radius:4px;background:#fff;color:#666666}
+.pages a:hover{background:#f27048 ;color:#fff;border:1px solid #f27048 ;}
+.pages .active{display:none}
+.pages span{margin-right:5px;}
+.pages .next{margin-left:0px!important}
+
+/*开始考试*/
+/*考试头部*/
+.ht-header{	background:#0a60a4; height:160px}
+.ht-header .lf{	width:60%; margin:50px 0 0; float:left}
+.ht-header .lf .ht-logo{	width:242px; float:left}
+.ht-header .lf .text{	width:316px; float:left; color:#fff; border-left:1px #fff solid; margin:11px 0 0 33px; padding:0 0 0 30px; height:45px}
+.ht-header .lf .text .p1{	font-size:21px; height:26px; line-height:26px; }
+.ht-header .lf .text .p2{	font-size:16px; }
+
+/*考试头部结束*/
+
+/*考试做题开始*/
+.ht-content{	background:#fff; border-top:6px #0a60a4 solid; margin:50px auto 0}
+/*做题头部(返回、交卷按钮)*/
+.zuoti{	margin:22px 30px;}
+.zuoti .zuoti-top{	margin:0 0 40px}
+.zuoti .zuoti-top a{	display:inline-block; margin:0 10px 0 0; width:92px; height:32px; line-height:32px; text-align:center; font-size:14px}
+.zuoti .zuoti-top a.link1{	background:#ededed; color:#666666}
+.zuoti .zuoti-top a.link2{	background:url(../img/exam/bg_23.jpg) repeat-x; color:#ffffff}
+/*头部按钮样式结束*/
+/*题目区域*/
+.zuoti-content{	overflow:hidden; position:relative}
+.zuoti-content .title{	border-bottom:1px #c1c1c1 solid; color:#333333; font-size:18px; padding:0 0 15px; margin:0 0 27px}
+.zuoti-content .title span{	font-size:14px; color:#666666}
+.timu{	margin:15px 0 0 ; font-size:14px}
+.timu h6{	font-size:16px; color:#000; font-weight:bold}
+.ti-main{	margin:18px 0 0	; font-size:14px;}
+.ti-main div{	margin:0 0 15px}
+.ti-main div input[type="radio"]{	margin:0}
+.ti-main div label{	margin:0 0 0 17px; color:#59606c; display:inline; width:auto}
+/*题目区域结束*/
+/*考试做题结束*/
+
+/*帮助中心*/
+
+.main .container{	width:1200px; padding:0}
+.jyxq-box{	background:#fff; overflow:hidden; padding:1.5% 2% 2%; margin:38px 0 25px}
+#lib_Tab1_sx{width:100%;margin:0px;padding:0px;margin-bottom:15px; overflow:hidden;}
+.lib_tabborder_sx{}
+.lib_Menubox_sx {line-height:28px; float:left; width:195px; height:240px; float:left}
+.lib_Menubox_sx ul{ margin:0px;padding:0px;list-style:none;  margin-left:0; height:25px;text-align:center;}
+.lib_Menubox_sx li{display:block;cursor:pointer; width:215px;color:#fff; margin-bottom:10px;height:45px;line-height:45px; background:url(../img/helpcenter/bg_57.png) no-repeat top left; font-size:16px}
+.lib_Menubox_sx li.hover{padding:0px; width:215px;border-right:0; color:#fff;height:45px;line-height:45px; background:url(../img/helpcenter/bg_56.png) no-repeat top left;}
+.lib_Contentbox_sx{margin-top:0px; border-top:none; border-left:0; float:right; width:907px}
+.lib_Contentbox_sx #con_one_1{}
+.lib_Contentbox_sx #con_one_1 .text{	}
+.lib_Contentbox_sx #con_one_1 .text h3{	font-size:16px; color:#0a60a4;}
+.lib_Contentbox_sx #con_one_1 .text .nr-text{	line-height:33px; font-size:14px; margin:15px 0 0; padding:0 0 0 25px}
+.lib_Contentbox_sx #con_one_3{	text-align:left}
+.lib_Contentbox_sx #con_one_3 h6{	font-size: 15px; margin-top: 10px; font-weight: 700; }
+.lib_Contentbox_sx #con_one_3 p{	line-height: 1.8; text-indent: 2em; margin:8px 0 0}
+.lib_Contentbox_sx #con_one_4 .fs20{	font-size:20px}
+.lib_Contentbox_sx #con_one_4 .fs20 .phone { position: relative;  top: -7px;margin-right: 10px;}
+.lib_Contentbox_sx #con_one_4 .fs30{	font-size: 30px;     color: #e20013;     padding-left: 20px;}
+.lib_Contentbox_sx #con_one_4 .bor-dt{	    border-top: 1px dashed #ddd; padding-top: 20px; margin:20px 0 0}
+.lib_Contentbox_sx #con_one_4 .bor-dt p{	margin:0 0 10px; font-size:14px}
+.lib_Contentbox_sx #con_one_4 .bor-dt .left-txt span{	    width: 75px; text-align: right;  margin-right: 10px; display: inline-block;}
+/*培训流程*/
+/* 本例子css */
+.notice-czys { overflow: hidden; }
+.notice-czys .tab-hd { height: 32px; color: #666666; margin:0 0 20px; border-bottom:1px #cbcbcb solid}
+.notice-czys .tab-hd ul {  overflow:hidden;  border-left:1px #cbcbcb solid}
+.notice-czys .tab-hd li{ float: left; height: 32px; line-height: 32px; width:120px; text-align:center; font-size:14px; border:1px #cbcbcb solid; border-bottom:none; border-left:none; cursor:pointer}
+.notice-czys .tab-hd li a{ display:block; padding:0 14px;  }
+.notice-czys .tab-hd li a:hover{ color:#f60; text-decoration:underline;   }
+.notice-czys .tab-hd li.on{ border-bottom: none; background-color: #f27048; color:#fff; position: relative; }
+.notice-czys .tab-bd { padding:5px;  }
+.notice-czys .tab-pal{	line-height:33px; font-size:14px}
+
+/*陈亭亭*/
+/*删除选课样式*/
+.btn-choice-oning{background-color: #f27048;border:0;
+    width: 134px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 50px}
+.btn-choice-oning span.btn-choice-icon{
+    display:inline !important;
+    padding-left: 26px;
+    background: url("../img/icon_choice.png") no-repeat left center;
+}
+/*结束*/
+/*学分样式*/
+.sideMenu .qbkc-kcfl div table td .xuefen{ overflow:hidden}
+.sideMenu .qbkc-kcfl div table td .xuefen .span1{	width:12px; display:inline-block}
+.sideMenu .qbkc-kcfl div table td .xuefen .span2{	font-size:32px; color:#48acf2}
+.sideMenu .qbkc-kcfl div table td .xuefen .span3{	font-size:32px; color:#f27048}
+/*学分样式结束*/
+/*我的提问样式*/
+.notice{
+    margin-top: 75px;
+}
+.notice{ width:100%; text-align:left; padding:0 0 0 34px; margin:-30px 0 0; *margin:0; }
+.content-rg .xxbg .xxbg-top{	background:url(../img/bg_18.png) no-repeat 0px 7px; padding:0 0 0 30px}
+.content-rg .xxbg .xxbg-top .span1{	font-size:20px; margin:0 25px 0 0}
+.content-rg .xxbg .xxbg-top .span2{	text-align:center;}
+.content-rg .xxbg .xxbg-top .span2 select{	width:175px; height:35px; *height:27px; line-height:35px; font-size:16px; color:#666666}
+.content-rg .xxbg .xxbg-top .span3{	float:right; color:#8a8a8a; font-size:14px;}
+.content-rg .xxbg .xxbg-top .span3 a{	color:#8a8a8a}
+/*结束*/
+/*提问分页样式*/
+.pages{text-align:center;padding:36px 0 70px;}
+.pages a{border:1px solid #dddddd;padding:6px 12px;border-radius:4px;background:#fff;color:#666666}
+.pages .current{border:1px solid #f27048;padding:6px 12px;border-radius:4px;background:#f27048;color:#fff}
+.pages .active{border:1px solid #dddddd;padding:6px 12px;border-radius:4px;background:#fff;color:#666666}
+.pages a:hover{background:#f27048 ;color:#fff;border:1px solid #f27048 ;}
+.pages .active{display:none}
+.pages span{margin-right:5px;}
+.pages .next{margin-left:0px!important}
+/*提问分页结束*/
+
+/*具体提问的问题字体样式*/
+.notice .bd li a .tit{	position:relative; color:#0a60a4; font-size:16px; padding:70px 135px 0 0}
+.notice .bd li a .tit .date{ color:#666666; position:absolute; top:0; right:0; font-size:12px }
+/*结束*/
+
+/*具体回答的字体样式*/
+.notice .bd li a .text{	line-height:20px ; font-size:14px; color:#999999; margin:25px 0 12px }
+.notice .bd li a .text span{	color:#f27048}
+/*结束*/
+
+/*回答时间样式*/
+.notice .bd li a .bt span{	color:#999999; font-size:14px; margin:0 20px 0 0}
+/*结束*/
+
+/*提问时间样式*/
+.notice .bd li a .tit .date{ color:#666666; position:absolute; top:0; right:0; font-size:12px;padding-top: 70px }
+/*结束*/
+
+/*提交按钮样式*/
+.problem-lf-bt span.span3 input[type="submit"]{	background:#f27048; color:#fff; border:none; width:130px; float:right; font-size:16px; *margin:-34px 0 0 }
+/*结束*/
+
+/*试听*/
+.sideMenu .qbkc-kcfl div table td .mfst{ display:block; text-align:center; color:#48acf2; font-size:14px; margin:0 0 10px}
+/*结束*/
+
+
+.sideMenu .qbkc-kcfl div table td .xuefen .span1{	width:12px; display:inline-block; color:#999999;font-size:16px}
+.sideMenu .qbkc-kcfl div table td .xuefen .span2{	font-size:32px; color:#48acf2}
+.sideMenu .qbkc-kcfl div table td .xuefen .span3{	font-size:32px; color:#f27048}
+
+/*我的问题提交按钮样式*/
+.btn
+{
+    background: #f27048;
+    color: #fff;
+    border: none;
+    width: 130px;
+    float: right;
+    font-size: 16px;
+    margin: -3px 0 0;
+}
+/*结束*/
+
+/*学分报告-通过年度字体样式*/
+.content-rg .imkc2 .tit4 span{	color:#0a60a4; font-size:18px; font-weight:bold}
+/*结束*/

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>播放大厅-在线学习平台</title>
+    <!--webSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/Video-style.css"/>
+
+    <!--webSiteJs-->
+    <link rel="stylesheet" href="../js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="../js/jquery-3.3.1.js"/>
+    <link rel="stylesheet" href="../js/script.js"/>
+    <script src="../js/ckplayer.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="logocont">
+    <div class="logocont_zhezhao">
+    </div>
+    <div class="con-tongw">
+        <!--<img src="../img/videoplay/y.jpg" />-->
+        <i class="lf">在线学习平台</i>
+        <i class="rt">在线教育，提升从业人员专业知识水平</i>
+    </div>
+</div>
+<div class="main pr">
+    <div class="vidcont" style="width: 75%">
+        <div class="vidcont_zhezhao">
+        </div>
+        <div class="maintop pr">
+            <a class="back lf f20" href="myCourse.html">返回</a>
+            <!--获取课程题目-->
+            <p class="tit lf f20 p1" id="kechengtitle">
+
+            </p>
+        </div>
+        <div >
+            <div id="video" style="width: 100%; height: 90%;"></div>
+
+        </div>
+
+    </div>
+    <div class="jieshao pa" style="width: 25%;">
+        <div class="jieshao_zhezhao">
+        </div>
+        <div class="maintop line_left">
+            <div class="bshare-custom" style="padding-left: 40px">
+
+                <a title="分享到QQ空间" class="bshare-qzone" onclick='share("qq")'></a>
+                <a title="分享到微信" class="bshare-weixin" href="javascript:void(0);" onclick ='share("微信")'></a>
+                <a title="分享到新浪微博" class="bshare-sinaminiblog" onclick='share("新浪")'></a>
+                <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" onclick='share("qq好友")'></a>
+            </div>
+            <script type="text/javascript" charset="utf-8"
+                    src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+            <span class="pa closebtn"></span>
+        </div>
+        <div class="jshcont" id="jshcont">
+            <div class="jshtit line_bottom f16 text-c">
+                <span class="cur lf" href="javascript:void(0);">课程目录</span> <span class="lf" href="javascript:void(0);">
+                        课程讲义</span>
+                <!--<ifram src="" width="50%" align="left"></ifram>-->
+                <!--<iframe src="" width="49%" align="right"></iframe>-->
+            </div>
+            <!--<div class="mulucont" id="mlcont">-->
+                <!--<div class="ketong" id="ket1">-->
+
+                <!--</div>-->
+            <!--</div>-->
+            <div class="jiangyicont" id="jycont" style="height: 100%;">
+                <div class="jyketong" id="ket2" style="height: 325px">
+                </div>
+                <div class="jybtn">
+                    <a class="xiazai" href="javascript:;" onclick="xiazai()" id="xiazai"></a>
+                </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    // 视频播放，包括视频播放器功能，记录学生听课位置
+    // 不要大改
+    //BY 徐超 start
+    // function closeWin(){
+    //     //有关闭确认
+    //     //if(confirm("您确定要关闭本页吗？")){
+    //     // window.opener=null;
+    //     // window.open('','_self',"");
+    //     // window.close();
+    //     // window.parent.close()
+    //     //}
+    //
+    //     var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+    //
+    //     parent.layer.close(index); //执行关闭
+    //     alert(index)
+    //
+    //     parent.location.href="./MyCopurse";//回到父级页面
+    // }
+    // function GetQueryString(name)
+    // {
+    //     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    //
+    //     var r = window.location.search.substr(1).match(reg);
+    //
+    //     if(r!=null)return  unescape(r[2]); return null;
+    // }
+
+    // var couId = GetQueryString("couId");
+    couId=location.href.split("?")[1].split("=")[1]
+    // var arr = ['1.mp4','2.mp4','3.mp4']
+    console.log(couId)
+    //操作cookie的对象
+    k = 0;
+    id1=7;//学生，上一页面传入
+    id2=couId;//课程，上一页面传入
+    var cookie = {
+        set: function (name, value) {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + '=' + escape(value) + ';expires=' + exp.toGMTString();
+        },
+        get: function (name) {
+            var arr, reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)');
+            if (arr = document.cookie.match(reg)) {
+                return unescape(arr[2]);
+            } else {
+                return null;
+            }
+        },
+        del: function (name) {
+            var exp = new Date();
+            exp.setTime(exp.getTime() - 1);
+            var cval = getCookie(name);
+            if (cval != null) {
+                document.cookie = name + '=' + cval + ';expires=' + exp.toGMTString();
+            }
+        }
+    };
+
+    function loadedHandler() {
+        player.addListener('time', timeHandler); //监听播放时间
+        player.addListener('ended', endedHandler); //监听播放结束
+
+        //设置只能往左不能往右
+        player.changeConfig('config', 'timeScheduleAdjust', 5)
+    }
+
+
+    function timeHandler(t) {
+
+        // console.log('.currenttimestate', '当前播放时间（秒）：' + t)
+
+        var param = {
+            'id1':id1,//学生id
+            'id2':id2,//课程id
+            'id3':k,//视频
+            't':t//位置
+        }
+        $.post('/selcou/updata/',param)//调用selcouControl内的update播放更新位置
+
+
+        cookie.set('time_' + videoID, t); //当前视频播放时间写入cookie
+        // changeText('.currenttimestate', '当前播放时间（秒）：' + time);
+    }
+    function endedHandler(){
+        if(k+1<arr.length){
+            k++
+            videoID = arr[k]['vidId'];
+            console.log(k)
+            console.log("20190826   "+arr[k]['path'])
+            changeVideo('/upload/'+arr[k]['path'])
+            var param = {
+                'id1':id1,//学生id
+                'id2':id2,//课程id
+                'id3':k,//视频
+                't':0//位置
+            }
+            $.post('/selcou/updata/',param)//调用selcouControl内的update播放完毕将视频加一，位置置零
+        }
+        else{
+            $.get("/video/iffinish1/"+id2,function (r) {
+                console.log(r)
+                if (r==1){
+                    alert("全部视频播放完成！")
+                }
+            },'json')
+        }
+    }
+
+    function changeVideo(videoUrl) {
+        if(player == null) {
+            return;
+        }
+
+        var newVideoObject = {
+            container: '#video', //容器的ID
+            variable: 'player',
+            autoplay: true, //是否自动播放
+            loaded: 'loadedHandler', //当播放器加载后执行的函数
+            video: videoUrl
+        }
+
+
+        //判断是需要重新加载播放器还是直接换新地址
+
+        if(player.playerType == 'html5video') {
+            if(player.getFileExt(videoUrl) == '.flv' || player.getFileExt(videoUrl) == '.m3u8' || player.getFileExt(videoUrl) == '.f4v' || videoUrl.substr(0, 4) == 'rtmp') {
+                player.removeChild();
+
+                player = null;
+                player = new ckplayer();
+                player.embed(newVideoObject);
+            } else {
+                player.newVideo(newVideoObject);
+            }
+        } else {
+            if(player.getFileExt(videoUrl) == '.mp4' || player.getFileExt(videoUrl) == '.webm' || player.getFileExt(videoUrl) == '.ogg') {
+                player = null;
+                player = new ckplayer();
+                player.embed(newVideoObject);
+            } else {
+                player.newVideo(newVideoObject);
+            }
+        }
+    }
+    //从上一页面传入的数据
+    var param = {
+        'id1':id1,//学生id
+        'id2':id2,//课程id
+    }
+
+
+    $.get('/video/play/'+id2,function (r) {
+        //alert(r);
+
+        arr=r;
+        console.log(r)
+        // arr=["1.mp4","2.mp4","3.mp4"];
+
+
+        videoID = arr[k]['vidId']; //视频的区分ID，每个视频分配一个唯一的ID
+        console.log(videoID)
+        console.log(k)
+        var cookieTime = cookie.get('time_' + videoID); //调用已记录的time
+        //console.log(cookieTime);
+        if (!cookieTime || cookieTime == undefined) { //如果没有记录值，则设置时间0开始播放
+            cookieTime = 0;
+        }
+        // if (cookieTime > 0) {
+        //     // alert('本视频记录的上次观看时间(秒)为：' + cookieTime);
+        // }
+
+        // $.get('/selcou/loc',function (r) {
+        //     alert(r[0]['posTime'])
+        //     var loc=r[0]['posTime']
+        //     videoObject['seek'] =loc;
+        // })
+
+        var videoObject = {
+            container: '#video', //容器的ID或className
+            variable: 'player', //播放函数名称
+            loaded: 'loadedHandler', //当播放器加载后执行的函数
+            autoplay: true,
+            video: '/upload/'+arr[k]['path'],
+        };
+
+        $.get('/selcou/loc',param,function (r) {//利用param包含学生id和课程id调用selcouControl内的loc，返回一个postime属性
+            //alert(r)
+            videoObject['seek']=r;
+            $.get("/video/update?id2="+id2+"&id3="+videoID+"&t="+r+"&k="+k,function (r) {
+                console.log(r)
+
+            },'json')
+            player = new ckplayer(videoObject);
+        },'json')
+
+    },'json')
+
+
+
+
+
+    // BY 成彦颖 贾 郝彦杰
+    function share(str) {
+        alert( videoID)
+
+        $.post('/share/add', {"plat": str,"vidId":videoID}, function (r) {
+            console.log(str)
+            if (r.code == 0) {
+
+                alert('分享成功')
+            } else {
+
+                alert('分享失败')
+            }
+
+        },'json')
+    }
+
+    //课程目录
+    $.get("/video/getvideonamelist/"+couId,function (r) {
+        list=''
+        console.log(r)
+        num1=""
+        num2=""
+        rate=""
+        for (var i in r){
+            num1=r[i].posTime
+            num2=r[i].hour
+            console.log(num1)
+            console.log(num2)
+            rate=parseInt(num1)/parseInt(num2)*100
+            //alert(rate)
+            t=parseInt(i)+1;
+            list+='<table><tr><h1 style="margin-top: 10px;font-size: 30px;line-height: 30px">&nbsp;第'+t+'堂:'+r[i].vidName+'</h1>' +
+                '<div class="progress" style="margin-top: 15px">\n' +
+                '\t<div class="progress-bar" role="progressbar" aria-valuenow="60"\n' +
+                '\t\t aria-valuemin="0" aria-valuemax="100" style="width: '+rate+'%;">\n' +
+                '\t\t<span class="sr-only">40% 完成</span>\n' +
+                '\t</div>\n' +
+                '</div></tr><table>'+''
+        }
+        $("#ket2").append(list);
+    })
+
+    //下载讲义
+
+            $.get("/course/getById/"+couId,function (r) {
+                console.log(r);
+                file=r.note;
+                $("#xiazai").attr('href','/down?file='+file)
+
+                },'json')
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,44 @@
+/*整个架子*/
+.problem-lf{	width:100%; float:left}
+.problem-lf .tit{	height:39px; line-height:39px; padding:0 5px; margin:0 0 13px; width:100%; border:1px #cccccc solid; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.problem-lf #editor3{	width:100%; min-height:235px}
+.problem-lf-bt{	margin:22px 0 0}
+.problem-lf-bt span{	height:40px; line-height:40px; display:inline-block}
+.problem-lf-bt span.span1{	width:85px; text-align:center}
+.problem-lf-bt span.span2{}
+.problem-lf-bt span.span2 select{	height:40px; line-height:40px; color:#666666; border:1px #cccccc solid}
+.problem-lf-bt span.span3{	float:right; width:200px; *margin:-34px 0 0}
+.problem-lf-bt span.span3 em{	font-style:normal}
+.problem-lf-bt span.span3 label{	display:inline; margin: 0 0 0 5px; width:auto; height:auto}
+.problem-lf-bt span.span3 input[type="submit"]{	background:#f27048; color:#fff; border:none; width:130px; float:right; font-size:16px; *margin:-34px 0 0}
+
+
+.notice3 { width: 100%; overflow: hidden;background:#fff }
+.notice3 .hd { height:32px;  color: #404040;  }
+.notice3 .hd > ul { }
+.notice3 .hd > ul > li{ float: left; height: 32px; line-height: 32px; width:96px; text-align:center; font-size:16px; position: relative; margin:0 20px 0 0; background:#eef0f4}
+.notice3 .hd > ul > li a{	color: #404040;}
+.notice3 .hd > ul > li:hover{ color:#fff; background:#0a60a4;  cursor:pointer }
+.notice3 .hd > ul > li.on{ color: #fff; background:#0a60a4;  }
+.notice3 .hd .rg{	float:right; font-size:14px}
+.notice3 .hd .rg strong{	color:#f27048}
+.notice3 .bd .tit-sx{	border-bottom:1px #cbcbcb solid; margin:50px 0 0}
+.notice3 .bd .tit-sx a{	display:inline-block; border:1px #cbcbcb solid; border-left:none;border-bottom:none; color:#666666; height:32px; line-height:32px; width:95px; text-align:center; font-size:14px}
+.notice3 .bd .tit-sx a.on{	background:#f27048; color:#fff; }
+.notice3 .bd .tit-sx2{	margin:20px 0 0; font-size:16px;}
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;word-wrap:break-word}
+a{text-decoration:none;background: transparent}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+/*除去第一句话*/
+.ljkejj-cjtw dl dd h6{	background:url(../img/img_46.png) no-repeat 0 50%; font-size:14px; color:#0a60a4; padding:0 0 0 40px; font-weight:bold; height:30px; line-height:30px; margin:0 0 17px}
+.ljkejj-cjtw dl dd h6 span{	float:right; color:#666666;font-weight:normal; *margin:-26px 0 0 }
+.ljkejj-cjtw dl dd h6 span em{	color:#666666; font-style:normal; font-weight:normal; margin:0 25px}
+.ljkejj-cjtw dl dd .text{	background:url(../img/img_47.png) no-repeat 0 0; font-size:14px; padding:0 0 0 40px;  color:#999999; }
+.ljkejj-cjtw dl dd .text p{	height:40px; overflow:hidden; line-height: 20px;}
+.ljkejj-cjtw dl dd .text .ren{	margin:20px 0 0; font-size:14px}
+.ljkejj-cjtw dl dd .text .ren span{	color:#666666; font-weight:bold}
+
+.ljkejj-cjtw dl dd{	padding:0 0 25px; border-bottom:1px #d3d3d3 dashed; margin:30px 0 0}
+
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--视口的配置信息-->
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="../js/Chart.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <style>
+        textarea{
+            width: 1100px;
+            height: 80px;
+        }
+    </style>
+<head>
+    <title>我的消息</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4>我的消息</h4>
+            </div>
+            <!--标签导航-->
+            <ul class="nav nav-tabs ">
+                <div class="col-lg-offset-3">
+                    <li class=""><h4><a href="myMessageUnread.html">未回复消息</a></h4></li>
+                </div>
+                <div class="col-lg-2">
+                    <li class=""><h4><a href="myMessage.html">已回复消息</a></h4></li>
+                </div>
+            </ul>
+
+            <!--提问模块-->
+            <div class="media well" >
+                <div class="media-body">
+                    <form>
+                        <!--传入学生id-->
+                       <!-- <input type="hidden" name="stuId" value='1'>-->
+
+                        <div class="input-group">
+                            <h2></h2>
+                            <textarea name="content" id="content"></textarea>
+                        </div>
+                        <div>
+                            <h2></h2>
+                            <!--<input type="button" class="btn btn-primary pull-right" onclick="sub()" value="我要提问">-->
+                            <input type="button" class="btn btn-primary" id="sub" value="我要提问">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!--显示所有评论内容-->
+            <div id="weihuifu" class="media well">
+                <div class="media-body">
+                   <div id="stuMessage">
+                       <h3>未回复消息</h3><hr>
+                   </div>
+                </div>
+            </div>
+
+            <div id="yihuifu" class="media well hidden">
+                <div id="stuMessage2">
+                    <div class="media-body">
+                        <h3>已回复消息</h3><hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    /贾
+    /*传入学生id*/
+    $.get('/stuMessage/getByStuId',function (r) {
+
+        if(r.code==0){
+
+            stuMessageList = r.data.stuMessageList
+
+            var text = ''
+            var text2 = ''
+
+            for(i in stuMessageList){
+
+                /*显示未回复的消息*/
+                if(stuMessageList[i].flag==0){
+                    text += `
+
+                       <form>
+                        <div class="col-lg-12">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action" href="messageReply.html?messId=${stuMessageList[i].messId}">${stuMessageList[i].content.substr(0,95)}</a>
+
+                        </div>
+                        <!--<div class="col-lg-1">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action" href="javascrit:;" onclick="rem()">删除</a>
+                        </div>-->
+                    </form>
+
+                `
+                }else{
+                    // 本页面隐藏 无效数据
+                    text2 += `
+                    <form>
+                        <div class="col-lg-11">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action" href="messageReply.html?messId=${stuMessageList[i].messId}">${stuMessageList[i].content.substr(0,95)}</a>
+                         </div>
+                         <div class="col-lg-1">
+                            <h3></h3>
+                           <!-- <a class="list-group-item list-group-item-action" href="javascrit:;" onclick="rem()">删除</a>-->
+
+                         </div>
+                     </form>
+                `
+                }
+            }
+
+            $('#stuMessage').append(text)
+            $('#stuMessage2').append(text2)
+
+        }
+    },'json');
+
+    /*点击 我要提问 触发的行为*/
+    $(document).ready(function () {
+
+        $("#sub").click(function () {
+
+            var content = $('#content').val();
+
+            if(content == ''){
+
+                alert("提问内容不能为空");
+                return false;
+            }else {
+
+                $.post('/stuMessage/save',$('form').serialize(),function (r) {
+
+                    /*con = ($('form').serialize()).split("&")[1].split("=")[1]*/
+
+                    if(r.code==0){
+
+                        alert('提问成功')
+                        window.location.href="./myMessageUnread.html"
+                    }else{
+
+                        alert('提问失败')
+                        window.location.href="./myMessageUnread.html"
+                    }
+
+                },'json');
+            }
+        })
+    })
+
+
+</script>
+
+
+</html>

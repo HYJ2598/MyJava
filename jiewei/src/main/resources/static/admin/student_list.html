@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>学员管理</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h3>学生管理 &nbsp;
+                    <a href="ad_student.html"><button class="btn-primary">添加</button></a></h3>
+                <center>
+                    <form role="search" class="navbar-form form-group-lg" method="post" action="" id="searchAll">
+                        <div class="form-group">
+                            <tr>
+                        <input type="text" placeholder="姓名" name="stuName" id="stuName">
+                                <input type="text"class="" placeholder="身份证" name="idcard" id="idcard"/>&nbsp;&nbsp;<input type="text"class="" placeholder="单位" id="company" name="company" >
+                                <button class="btn btn-primary" id="sear">搜索</button>
+                            </tr>
+                        </div>
+                    </form>
+                </center>
+
+            </div>
+            <table class="table table-hover table-striped" id="table">
+                <thread>
+                    <tr>
+                        <td>学员ID</td>
+                        <td>姓名</td>
+                        <td>身份证</td>
+                        <td>单位</td>
+                        <td>选课详情</td>
+                        <td>所选学分</td>
+                        <td>已完成学分</td>
+                        <td>操作</td>
+                    </tr>
+                </thread>
+                <tbody >
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- 全局js -->
+<script src="../js/jquery.min.js?v=2.1.4"></script>
+<script src="../js/bootstrap.min.js?v=3.3.6"></script>
+
+<!-- 自定义js -->
+<script src="../js/content.js?v=1.0.0"></script>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<!--统计代码，可删除-->
+
+
+
+</body>
+
+<!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>-->
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    //成彦颖
+    $.get('/student/list', function (r) {
+
+        for (i = 0; i < r.length; i++) {
+            str = `
+               <tr>
+                    <td>${r[i]['stuId']}</td>
+                    <td>${r[i]['stuName']}</td>
+                    <td>${r[i]['idcard']}</td>
+                    <td>${r[i]['company']}</td>
+                    <td><a href="ad_course_xuanke.html?id=${r[i]['stuId']}" >详情</a> </td>
+                    <td>${r[i]['selectCredit']}</td>
+                    <td>${r[i]['finishCredit']}</td>
+                    <td><a href="javascript:;" onclick="removeThis(${r[i]['stuId']},this)">删除</a>
+                         <a href="update_student.html?id=${r[i]['stuId']}">修改</a></td>
+                </tr>
+            `
+
+            $('table').append(str)
+        }
+    }, 'json')
+
+
+    $('#sear').click(function (e) {
+
+        e.preventDefault();
+        $.ajax({
+            type: 'post',
+            url: '/student/search/',
+            // data: {id: id.value},
+            data:$("#searchAll").serialize(),
+            dataType: 'json',
+            success: function (r) {
+                // $('table').html('')
+                $("#table tr:not(:first)").empty("");
+                for (i = 0; i < r.length; i++) {
+                    str = `
+               <tr>
+                    <td>${r[i]['stuId']}</td>
+                    <td>${r[i]['stuName']}</td>
+                    <td>${r[i]['idcard']}</td>
+                    <td>${r[i]['company']}</td>
+                    <td><a href="ad_course_xuanke.html?id=${r[i]['stuId']}" >详情</a> </td>
+                    <td>${r[i]['selectCredit']}</td>
+                    <td>${r[i]['finishCredit']}</td>
+                    <td><a href="javascript:;" onclick="removeThis(${r[i]['stuId']},this)">删除</a>
+                         <a href="update_student.html?id=${r[i]['stuId']}">修改</a></td>
+
+
+                </tr>
+            `
+                    $('table').append(str)
+                }
+            }
+
+        })
+
+    });
+
+    function removeThis(id,o) {
+        if(confirm("确定删除？")){
+            //ajax 发送要删除的id
+            $.post('/student/remove/'+id,function (r) {
+                if(r){
+                    alert("删除成功")
+                    $(o).parent().parent().remove();
+                }else {
+                    alert("删除失败")
+                }
+            },'json');
+        }
+    }
+
+
+</script>
+</html>

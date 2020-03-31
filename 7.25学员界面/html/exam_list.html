@@ -1,0 +1,159 @@
+<!--考试列表-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-考试</title>
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <title>个人中心-考试</title>
+    <!--WebSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/PcSite.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="/font/iconfont.css" />
+    <!--WebSiteJs-->
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.js"></script>
+    <script src="../js/script.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="main">
+    <!--header开始-->
+    <div class="ht-header">
+        <div class="box">
+            <div class="lf">
+                <div class="ht-logo">
+                    <img src="../images/ht-logo.png" alt=""></div>
+                <div class="text">
+                    <p class="p1">
+                        非货币性资产交换解读</p>
+                    <p class="p2">
+                        山西省会计人员继续教育</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header结束-->
+    <!--考题开始-->
+    <div class="box ht-content">
+        <div class="zuoti">
+            <!--头部--两个按钮-->
+            <div class="zuoti-top">
+                <a href="javascript:window.history.go(-1)" class="link1">返回</a>
+                <a href="javascript:ConfirmExam()" class="link2">交卷</a>
+            </div>
+            <!--头部两按钮结束-->
+            <!--做题区域开始-->
+            <div class="zuoti-content">
+                <div class="title">
+                    <span>（本类题共5小题。总分100分。多选、错选、不选均不得分）</span>
+                </div>
+                <div class="timu" id="div_ques1">
+                        <input type="hidden" id="ipt_ques1" value="" />
+                        <h6>
+                            1.[单选题]下列交易中，不属于非货币性资产交换的有（　）。（本题20分）</h6>
+                        <div class="ti-main">
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="A"><label>A.以公允价值为1 200万元的土地使用权换取一座办公楼，另收取补价250万元</label></div>
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="B"><label>B.以公允价值为800万元的专利技术换取一台设备，另支付补价160万元</label></div>
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="C"><label>C.公允价值为2 400万元的厂房换取一项无形资产，另收取补价600万元</label></div>
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="D"><label>D.公允价值为600万元的厂房换取一项投资，另支付补价120万元</label></div>
+
+                        </div>
+                    </div>
+                <div class="timu" id="div_ques2">
+                        <input type="hidden" id="ipt_ques2" value="" />
+                        <h6>
+                            2.[多选题]非货币性资产包括（   ）（本题20分）</h6>
+                        <div class="ti-main">
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="A"><label>A.固定资产</label></div>
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="B"><label>B.无形资产</label></div>
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="C"><label>C.存货</label></div>
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="D"><label>D.长期股权投资</label></div>
+
+                        </div>
+                    </div>
+                <div class="timu" id="div_ques4">
+                    <input type="hidden" id="ipt_ques4" value="2158" />
+                    <h6>
+                        4.[判断题]采用公允价值对非货币性资产交换进行计量的，应当以换出资产的公允价值和应支付的相关税费作为换入资产的成本（本题20分）</h6>
+                    <div class="ti-main">
+
+                        <div>
+                            <input type="radio" name="options4"
+                                   onclick="checkanswer('4')" value="A"><label>A.正确</label></div>
+
+                        <div>
+                            <input type="radio" name="options4"
+                                   onclick="checkanswer('4')" value="B"><label>B.错误</label></div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--做题区域结束-->
+        </div>
+    </div>
+    <!--考题结束-->
+</div>
+</body>
+<script type="text/javascript">
+
+    //确认交卷
+    function ConfirmExam() {
+        var i = 0;
+        $(".blue").each(function () {
+            i++;
+        });
+        if (i<totalnum) {
+            alert("您还有"+(totalnum - i)+"道题未作答，请作答后提交！");
+        }
+        else {
+            var itemans = '';
+            for (var i = 1; i <= totalnum; i++) {
+                var ans = '';
+                $("input[name='options" + i + "']:checked").each(function (i) {
+                    ans += $(this).val();
+                });
+                itemans += $("#ipt_ques" + i).val() + ":" + ans + ",";
+            }
+            if (itemans.length > 1) {
+                itemans = itemans.substr(0, itemans.length - 1)
+            }
+            window.location.href="/Exam/ExamResult.aspx?cid="+179+"&aitem="+itemans;
+
+        }
+
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>课程管理</title>
+    <link rel="shortcut icon" href=""> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+
+<body class="gray-bg">
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <a href="course.html" type="button" class="btn btn-primary"> &nbsp;返回</a>
+
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <div class="page-header">
+                <h3>添加课程 &nbsp;</h3>
+            </div>
+
+            <form >
+            <table class="table table-hover table-striped">
+                <tr>
+<!--                    <td>课程ID</td>-->
+<!--                    <td>005</td>-->
+                </tr>
+                <tr>
+                    <td>课程名</td>
+                    <td><input type="text" class="form-control" name="couName" id="couName"/></td>
+                </tr>
+                <tr>
+                    <td>课程介绍</td>
+                    <td><textarea name="couInf" id="couInf"  class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                    <td>老师</td>
+                    <td><input type="text" class="form-control" name="teacher" id="teacher"/></td>
+                </tr>
+                <tr>
+                    <td>老师介绍：</td>
+                    <td><textarea name="teaInf" id="teaInf"  class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                    <td>图片：</td>
+                    <td><textarea name="src" id="src"  class="form-control" type="hidden"></textarea></td>
+                </tr>
+                <tr>
+                    <td>在此添加课程图片</td>
+                    <td>
+                        <button type="button" class="layui-btn" id="test1"><i class="layui-icon"></i>上传课程图片</button>
+                        <script src="../layui/layui.js"></script>
+                        <script>
+                            layui.use('upload', function(){
+                                var upload = layui.upload
+                                var $ =layui.jquery
+                                //执行实例
+                                var uploadInst = upload.render({
+                                    elem: '#test1' //绑定元素
+                                    ,url: '/upload' //上传接口
+                                    ,accept:'file'
+                                    ,done: function(res){
+                                        //上传完毕回调
+                                        console.log(res)
+                                        $('[name=src]').val(res.data.src)
+                                        //如果上传失败
+                                        if(res.code > 0){
+                                            return layer.msg('上传失败');
+                                        }
+                                        //上传成功
+                                    }
+                                    ,error: function(){
+                                        //请求异常回调
+                                    }
+                                });
+                            });
+                        </script>
+                    </td>
+                </tr>
+            </table>
+
+
+            <center><input type="button" class="btn btn-primary" name="sub" id="sub" value="添加" /></a>
+            </center>
+            </form>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- 全局js -->
+<!--<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>-->
+
+<!-- 自定义js -->
+<!--<script src="js/content.js?v=1.0.0"></script>-->
+
+
+<!--<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>-->
+<!--统计代码，可删除-->
+
+
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    $('#sub').click(function () {
+        $.post('/course/add', $('form').serialize(), function (r) {
+
+            if (r) {
+                alert('添加成功')
+            } else {
+                alert('添加失败')
+            }
+        }, 'json')
+
+    })
+</script>
+</html>

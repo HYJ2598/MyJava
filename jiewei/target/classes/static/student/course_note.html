@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.css"/>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="form-group">
+    <textarea name="msg" id="" cols="30" rows="15" class="form-control"></textarea>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 " >
+            <a href="" >
+                <a class="btn btn-primary" style="margin-left: 45%;margin-top: 7%" id="downButton" href="">下载讲义</a>
+            </a>
+        </div>
+        <div class="col-xs-6 " >
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    var id=1;
+    $.get('/course/find1/'+id,function (r) {
+        // alert(r[0].notInf)
+        $('[name=msg]').val(r[0].notInf)
+        $('#downButton').attr('href','/down?file='+r[0].note)
+    },'json')
+
+
+
+</script>
+</html>

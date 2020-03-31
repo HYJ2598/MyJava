@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+</head>
+<body>
+<a href="course.html">返回</a>
+<table border="1px" cellpadding="0" width="50%" id="tableId">
+    <tr>
+        <!--        <td>视频id</td>-->
+        <td>序号</td>
+        <td>视频名称</td>
+        <td>视频时长</td>
+<!--        <td>所属课程</td>-->
+        <td>操作</td>
+    </tr>
+</table>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    id=location.href.split("?")[1].split("=")[1]
+    $.get('/video/list/'+id,function(r){//调用videoController中的list方法，返回r为查询到的video列表 BY 徐超
+
+        for (i=0;i<r.length;i++){
+            str=`
+                <tr>
+                    <td>${r[i]['sort']}</td>
+                    <td>${r[i]['vidName']}</td>
+                    <td>${r[i]['hour']}</td>
+<!--                    <td>${r[i]['couId']}</td>-->
+                    <td><a href="editVideo.html?id=${r[i]['vidId']}">编辑</a> <a href="javascript:;" onclick="removeThis(${r[i]['vidId']},this)">删除</a></td>
+                </tr>
+            `
+            $('table').append(str)
+        }
+    },'json')
+</script>
+</html>

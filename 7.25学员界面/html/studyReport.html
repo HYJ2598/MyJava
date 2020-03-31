@@ -1,0 +1,138 @@
+<!--学分报告-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <title>个人中心-学分报告</title>
+    <meta name="keywords" content="山西省会计人员继续教育网">
+    <meta name="description" content="山西省会计人员继续教育网">
+    <!--WebSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="/css/public.css?fr=201901220012" />
+    <link rel="stylesheet" href="../font/iconfont.css" />
+    <!--WebSiteJs-->
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.js"></script>
+    <script src="../js/script.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+    .sel_btn
+    {
+        font-size: 14px;
+        border: 1px solid #3179c3;
+        color: #666666;
+        padding: 4px 12px;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    .sel_btn:hover
+    {
+        font-size: 14px;
+        background: #3179c3;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    .checkyear
+    {
+        color: #fff;
+        background: #3179c3;
+    }
+    .sel_btn1, .sel_btn1:hover
+    {
+        font-size: 14px;
+        background: #f27048;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    .pages a
+    {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+<div class="header">
+    <div class="container" style="padding-left: 0px; padding-right: 0px;">
+        <div class="header_top">
+            <div class="pull-left header_top_left">
+                欢迎您来到山西省会计网!</div>
+            <div class="pull-right header_top_right">
+                <span id="ctl09_loginstate" class="header_top_login" style="font-size:14px;">欢迎您：秦艳 </span><a href="/Course/MyCourse.aspx" class="header_top_login" style=" margin-left:20px;">个人中心</a>|<a href="/loginout.aspx" class="header_top_login" style="margin-left:20px;">退出</a><a href="" class="header_top_phone"><i class="icon iconfont icon-dianhua"></i>客服电话:0351-7210826</a>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="pull-left logo">
+                <h1><img src="../images/logo.png" alt="" /></h1>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav_bar">
+                <div id='cssmenu' class="pull-right">
+
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="main">
+                <div class="box content">
+
+                    <div class="content-lf">
+                        <ul>
+                            <li><a href="myCourse.html" class="content-lf-icon1">我的课程</a></li>
+                            <li><a href="courseCenter.html" class="content-lf-icon2">选课中心</a></li>
+                            <li><a href="myExam.html" class="content-lf-icon3">考试中心</a></li>
+                            <li><a href="studyReport.html" class="content-lf-icon4">学分报告</a></li>
+                            <li><a href="myMessage.html" class="content-lf-icon5">我的问题</a></li>
+                            <li><a href="#" class="content-lf-icon7">我的订单</a></li>
+                            <li><a href="myAnswer.html" class="content-lf-icon6">提交工单</a></li>
+                            <li><a href="perInfo.html" class="content-lf-icon8">基本信息</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-rg">
+                        <div class="imkc2">
+                            <div class="tit4">
+                                <div class="xxbg-top">
+                                    <span class="span1">通过年度：</span><span class="span1">
+
+                        <a id="year_2018" href="StudyReport.aspx?Year=2018" class="sel_btn"
+                           style="">
+                            2018</a>
+
+                        <a href="/Order/CourseBuy.aspx?strUrl=/Users/StudyReport.aspx" class="sel_btn1">选择其他年度课程</a>
+                        <a href="javascript:doPrint()" class="sel_btn1" style="color:#fff">打印证书</a> </span>
+                                </div>
+                            </div>
+                            <div class="xf-text" id="print">
+
+
+                                <!--startprint-->
+                                <img src="../images/ReportImg.aspx" alt="" id="img_report"  style="padding-top: 20px"/>
+                                <!--endprint-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+</body>
+</html>

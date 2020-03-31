@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--视口的配置信息-->
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="../js/Chart.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <style>
+        textarea{
+            width: 1100px;
+            height: 80px;
+        }
+    </style>
+<head>
+    <title>我的消息</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h4>个人中心</h4>
+            </div>
+
+            <!--标签导航-->
+            <div>
+                <ul class="nav nav-tabs">
+                    <li><a href="adMessageRead.html">已回复消息</a></li>
+                    <li><a href="adMessage.html">未回复消息</a></li>
+                </ul>
+            </div>
+
+          <!--  <div class="media well" >
+                &lt;!&ndash;提问模块&ndash;&gt;
+                <div class="media-body">
+                    <form>
+                        &lt;!&ndash;传入学生id&ndash;&gt;
+                        <input type="hidden" name="stuId" value="1">
+                        <div class="input-group">
+                            <h2></h2>
+                            <textarea name="content"></textarea>
+                        </div>
+                        <div>
+                            <h2></h2>
+                            <input type="button" class="btn btn-primary pull-right" onclick="sub()" value="我要提问">
+                        </div>
+                    </form>
+                </div>
+            </div>-->
+
+            <!--显示所有评论内容-->
+            <div class="media well hidden">
+                <div class="media-body">
+                   <div id="adMessage">
+                       <h3>未回复消息</h3><hr>
+                   </div>
+                </div>
+            </div>
+
+            <div class="media well">
+                <div id="adMessage2">
+                    <div class="media-body">
+                        <h3>已回复消息</h3><hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+
+    /*显示所有问题*/
+    $.get('/stuMessage/all',function (r) {
+
+        if(r.code==0){
+
+            stuMessageList = r.data.stuMessageList
+
+            var text = ''
+            var text2 = ''
+
+            for(i in stuMessageList){
+
+                /*显示未回复的消息*/
+                if(stuMessageList[i].flag==0){
+                    text += `
+                    <form>
+                        <div class="col-lg-11">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action " href="adMessageReply.html?messId=${stuMessageList[i].messId}">${stuMessageList[i].content.substr(0,95)}</a>
+                        </div>
+                        <div class="col-lg-1">
+                            <h3></h3>
+                           <!-- <a class="list-group-item list-group-item-action " href="javascrit:;" onclick="rem()">删除</a>-->
+                        </div>
+                    </form>
+                `
+                }else{
+                    text2 += `
+                    <form>
+                        <div class="col-lg-12">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action " href="adMessageReply.html?messId=${stuMessageList[i].messId}">${stuMessageList[i].content.substr(0,95)}</a>
+                        </div>
+                        <!--<div class="col-lg-1">
+                            <h3></h3>
+                            <a class="list-group-item list-group-item-action " href="javascrit:;" onclick="rem()">删除</a>
+                        </div>-->
+                    </form>                `
+                }
+            }
+
+            $('#adMessage').append(text)
+            $('#adMessage2').append(text2)
+
+        }
+    },'json');
+
+
+</script>
+
+</html>

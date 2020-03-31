@@ -1,0 +1,21 @@
+.btn-wrapper {
+    margin-bottom: 20px;
+}
+.navbar{
+    background-color: #337AB7;
+}
+.navbar h1{
+    color:white;
+}
+.navbar h2{
+    color:white;
+}
+.btn-group-xs{
+    margin: 0 auto;
+    width: 100px;
+    height: 60px;
+}
+h1{
+    font-family: kaiti;
+
+}

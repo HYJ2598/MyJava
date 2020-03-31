@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/Chart.js"></script><!--导入chart.js文件-->
+    <script src="../js/script.js"></script>
+    <style>
+        ul, li {
+            list-style: none;
+        }
+        th,td{
+
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+<!--后台主体开始-->
+<!--信息展示开始-->
+<div class="container">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="page-header">
+                <h3>管理员管理</h3>
+                <a href="javascript:;" onclick="logout()">退出</a>
+            </div>
+            <a href="" type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#addAdmodal">&nbsp;添加管理员</a>
+            <table class="table table-hover table-striped" style="text-align: center;">
+                <thead class="" >
+                <tr>
+                    <td>序号</td>
+                    <td style="display: none">编号</td>
+                    <td>姓名</td>
+                    <td>密码</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody id="mytable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--信息展示结束-->
+</div>
+
+<!--右侧主体信息展示结束-->
+<!--后台主体结束-->
+
+
+<!-- 添加模态框开始-->
+<div class="modal fade" id="addAdmodal"> <!--modal 包含dialog context fade淡入-->
+    <div class="modal-dialog modal-sm">  <!--modal-sm 小模态框 modal-lg为大模态框-->
+        <div class="modal-content">
+            <!--ontext内包含 头 身体 底部-->
+            <div class="modal-header">
+                <p class="modal-title" id="add">管理员添加</p>
+            </div>
+            <div class="modal-body">
+                <!-- 表单显示各个信息开始-->
+                <form id="addAdmin">
+                    <div class="form-group">
+                        <label class="control-label">姓名</label>
+                        <input type="text" class="form-control" name="adName"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">密码</label>
+                        <input type="text" class="form-control" name="adPwd"/>
+                    </div>
+                </form>
+                <!--表单显示各个信息结束-->
+
+            </div>
+            <div class="modal-footer">
+                <input type="button" onclick="addSave()" value="保存" class="btn btn-primary">
+                <!--<button type="submit" class="btn btn-default" onclick="addSave()">保存</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 模态框结束
+ 修改模态框开始-->
+<div class="modal fade" id="upAdmodal"> <!--modal 包含dialog context fade淡入-->
+    <div class="modal-dialog modal-sm"><!--modal-sm 小模态框 modal-lg为大模态框-->
+        <div class="modal-content">
+            <!-- context内包含 头 身体 底部-->
+            <div class="modal-header">
+                <p class="modal-title">管理员修改</p>
+            </div>
+            <div class="modal-body">
+                <!--表单显示各个信息开始-->
+                <form id="upForm">
+                    <input type="text" name="adId" id="adId" style="display: none">
+                    <div class="form-group">
+                        <label class="control-label">姓名</label>
+                        <input type="text" class="form-control" name="adName" id="adName">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">密码</label>
+                        <input type="text" class="form-control" name="adPwd" id="adPwd">
+                    </div>
+                </form>
+                <!--表单显示各个信息结束-->
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-primary">关闭</button>
+                <button type="submit" class="btn btn-default" onclick="addSave1()" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改模态框结束-->
+
+</body>
+<script>
+    $.get('/admin/list', function (r) {
+        for (i = 0; i < r.length; i++) {
+            str = `
+                   <tr>
+                         <td>${i + 1}</td>
+                         <td style="display: none">${r[i]['adId']}</td>
+                         <td>${r[i]['adName']}</td>
+                         <td>${r[i]['adPwd']}</td>
+                         <td><input id="update" type="button" value="修改" data-toggle="modal" data-target="#upAdmodal" onclick="editAdmin(this)" class="btn btn-primary"/>
+                         <input id="delete" type="button" value="删除" onclick="deleteAdmin(${r[i].adId})" class="btn btn-primary"/></td>
+                   </tr>
+
+                `
+            $('#mytable').append(str)
+        }
+    },
+        'json'
+    )
+
+        /*<!--添加管理员的js-->*/
+
+        function addSave() {
+            $.get('/admin/addAdmin', $('#addAdmin').serialize(), function (r) {
+                if (r == 1) {
+                    $('#addAdmodal').modal('hide')
+                    location.reload()
+                } else {
+
+                }
+            })
+        }
+
+        /*修改*/
+        function addSave1() {
+            $.get('/admin/update', $('#upForm').serialize(), function (r) {
+                if (r == 1) {
+                    $('#upAdmodal').modal('hide')
+                    location.reload()
+                } else {
+
+                }
+            })
+        }
+
+        /*修改管理员的js*/
+        function editAdmin(obj) {
+            var $td = $(obj).parents("tr").children("td")
+            var id = $td.eq(1).text();
+            var name = $td.eq(2).text();
+            var pwd = $td.eq(3).text();
+
+
+            $("#adId").val(id)
+            $("#adName").val(name)
+            $("#adPwd").val(pwd)
+        }
+
+        function deleteAdmin(adId) {
+            var rs = confirm("确定删除吗？")
+            if (rs == true) {
+                $.post('/admin/remove/' + adId)
+                location.reload()
+            } else {
+
+            }
+        }
+</script>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="res/js/my.js"></script>
+<script>
+   /* $.get(host+'user/info',function (r) {
+        $('#adName').html(r.data.user.adName)
+    },'json')*/
+
+    function logout() {
+        if(confirm("是否退出?")){
+            $.get('/logout',function (r) {
+                if(r.code==0){
+                    location = 'login_1.html'
+                }
+
+            },'json')
+        }
+    }
+</script>
+
+</html>

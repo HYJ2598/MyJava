@@ -1,0 +1,111 @@
+<!--基本信息-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>个人中心-基本信息</title>
+    <!--webSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/personnonif.css"/>
+
+    <!--webSiteJs-->
+    <link rel="stylesheet" href="../js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="../js/jquery-3.3.1.js"/>
+    <link rel="stylesheet" href="../js/script.js"/>
+    <link rel="stylesheet" href="../js/jquery.SuperSlide.2.1.js"/>
+</head>
+<body>
+<div class="header">
+    <div class="container" style="padding-left: 0px; padding-right: 0px;">
+        <div class="header_top">
+            <div class="pull-left header_top_left">
+                欢迎您来到杰威培训学校!</div>
+            <div class="pull-right header_top_right">
+                <span id="ctl09_loginstate" class="header_top_login" style="font-size:14px;">欢迎您：秦艳 </span>
+                <a href="myCourse.html" class="header_top_login" style=" margin-left:20px;">个人中心</a>|<a href="login.html" class="header_top_login" style="margin-left:20px;">退出</a><a href="" class="header_top_phone"><i class="icon iconfont icon-dianhua"></i>客服电话:0351-7210826</a>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="pull-left logo">
+                <h1>
+                    <img src="../images/logo.png" alt=""></h1>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="box content">
+        <div class="content-lf">
+            <ul>
+                <li><a href="myCourse.html" class="content-lf-icon1">我的课程</a></li>
+                <li><a href="courseCenter.html" class="content-lf-icon2">选课中心</a></li>
+                <li><a href="myExam.html" class="content-lf-icon3">考试中心</a></li>
+                <li><a href="studyReport.html" class="content-lf-icon4">学分报告</a></li>
+                <li><a href="myMessage.html" class="content-lf-icon5">我的问题</a></li>
+                <li><a href="#" class="content-lf-icon7">我的订单</a></li>
+                <li><a href="myAnswer.html" class="content-lf-icon6">提交工单</a></li>
+                <li><a href="perInfo.html" class="content-lf-icon8">基本信息</a></li>
+            </ul>
+</div>
+        <div class="content-rg">
+    <div class="xxbg">
+        <div class="xxbg-top">
+            <span class="span1">基本信息 </span>
+        </div>
+        <div class="inner-rg-main1">
+            <form action="">
+                <div class="message-box look">
+                    <div class="message-new">
+                        <div class="message">
+                            <h2>
+                                姓名</h2>
+                            <input type="text" readonly="readonly" class="ipt" name="card" id="name" value="请输入姓名" onblur="">
+                        </div>
+                        <div class="message">
+                            <h2>
+                                身份证号</h2>
+                            <input type="text" readonly="readonly" class="ipt" name="name" id="card" value="请输入身份证号">
+                        </div>
+                        <div class="message">
+                            <h2>
+                                所在单位</h2>
+                            <input type="text" readonly="readonly" class="ipt" name="id" id="address" value="请输入地址">
+                        </div>
+                        <div class="message">
+                            <h2>
+                                手机号</h2>
+                            <input type="text" class="ipt" name="mobile" id="mobile" value="请输入手机号" onblur="VerificationMobile()">
+
+
+                        </div>
+
+                        <div class="message">
+                            <p id="p_msg" class="tl f26 mt30 ml30 mb20" style="color: #ff0000; margin-left:114px; margin-bottom:30px;">    </p>
+                            <a href="javascript:submitData()" class="bdsj-link" style=" margin-left:100px;">保存信息</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p class="yztx">
+                请如实填写您的手机号，继续教育完成会以短信的形式通知您！</p>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

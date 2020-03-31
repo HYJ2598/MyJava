@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>课程管理</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <a href="course.html" type="button" class="btn btn-primary"> &nbsp;返回</a>
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <div class="page-header">
+                <h3>修改课程 &nbsp;</h3>
+            </div>
+            <form >
+            <table class="table table-hover table-striped">
+                <tr>
+                    <td><label for="" class="control-label">课程ID</label></td>
+                    <td>
+                        <input type="hidden" name="couId">
+                        <label1 for="" class="control-label"></label1>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="" class="control-label">课程名</label></td>
+                    <td><input type="text" class="form-control" name="couName" id="couName"/></td>
+                </tr>
+                <tr>
+                    <td><label for="" class="control-label">课程介绍</label></td>
+                    <td><textarea name="couInf" id="couInf"  class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="" class="control-label">老师</label></td>
+                    <td><input type="text" class="form-control" name="teacher" id="teacher"/></td>
+                </tr>
+                <tr>
+                    <td><label for="" class="control-label">老师介绍</label></td>
+                    <td><textarea name="teaInf" id="teaInf"  class="form-control"></textarea></td>
+                </tr>
+            </table>
+            <center><input type="button" class="btn btn-primary" name="sub" id="sub" value="修改" /></a>
+            </center>
+            </form>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- 全局js -->
+<script src="../js/jquery.min.js?v=2.1.4"></script>
+<script src="../js/bootstrap.min.js?v=3.3.6"></script>
+
+<!-- 自定义js -->
+<script src="../js/content.js?v=1.0.0"></script>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<!--统计代码，可删除-->
+
+
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+
+    id = location.href.split("?")[1].split("=")[1]
+    $('label1').text(id)
+    $.get('/course/find1/'+id,function (r) {
+
+        $('[name=couName]').val(r[0]['couName'])
+        $('[name=couInf]').val(r[0]['couInf'])
+        $('[name=teacher]').val(r[0]['teacher'])
+        $('[name=teaInf]').val(r[0]['teaInf'])
+        $('[name=couId]').val(r[0]['couId'])
+    },'json')
+
+
+    $('#sub').click(function () {
+
+        $.post('/course/update', $('form').serialize(), function (r) {
+
+            if (r) {
+                alert('修改成功')
+            } else {
+                alert('修改失败')
+            }
+        }, 'json')
+
+    })
+</script>
+</html>

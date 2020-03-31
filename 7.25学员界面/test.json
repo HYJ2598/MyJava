@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "totalCount": 10,
+  "res": [
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":8,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":6.2,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":8,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":7,
+      "zt":1
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":8,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":8,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":8,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":8,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":7,
+      "zt":0
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":7,
+      "zt":1
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":7,
+      "zt":1
+    },
+    {
+      "imgSrc": "",
+      "course":"会计报表格式修订项目讲解",
+      "xuefen":7,
+      "zt":1
+    }
+  ]
+}

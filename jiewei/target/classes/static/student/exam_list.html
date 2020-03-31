@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-考试</title>
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <title>个人中心-考试</title>
+    <!--WebSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/PcSite.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="/font/iconfont.css" />
+    <!--WebSiteJs-->
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.js"></script>
+    <script src="../js/script.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="main">
+    <!--header开始-->
+    <div class="ht-header">
+        <div class="box">
+            <div class="lf">
+                <div class="ht-logo">
+                    <img src="../images/ht-logo.png" alt=""></div>
+                <div class="text">
+                    <p class="p1">
+                        非货币性资产交换解读</p>
+                    <p class="p2">
+                        山西省会计人员继续教育</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header结束-->
+    <!--考题开始-->
+    <!--<div class="box ht-content">
+        <div class="zuoti">
+            &lt;!&ndash;头部&#45;&#45;两个按钮&ndash;&gt;
+            <div class="zuoti-top">
+                <a href="javascript:window.history.go(-1)" class="link1">返回</a>
+                <a href="javascript:ConfirmExam()" class="link2">交卷</a>
+            </div>
+            &lt;!&ndash;头部两按钮结束&ndash;&gt;
+            &lt;!&ndash;做题区域开始&ndash;&gt;
+            <div class="zuoti-content">
+                <div class="title">
+                    <span>（本类题共5小题。总分100分。多选、错选、不选均不得分）</span>
+                </div>
+                <div class="timu" id="div_ques1">
+                        <input type="hidden" id="ipt_ques1" value="" />
+                        <h6>
+                            1.[单选题]下列交易中，不属于非货币性资产交换的有（　）。（本题20分）</h6>
+                        <div class="ti-main">
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="A"><label>A.以公允价值为1 200万元的土地使用权换取一座办公楼，另收取补价250万元</label></div>
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="B"><label>B.以公允价值为800万元的专利技术换取一台设备，另支付补价160万元</label></div>
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="C"><label>C.公允价值为2 400万元的厂房换取一项无形资产，另收取补价600万元</label></div>
+
+                            <div>
+                                <input type="radio" name="options1"
+                                       onclick="checkanswer('1')" value="D"><label>D.公允价值为600万元的厂房换取一项投资，另支付补价120万元</label></div>
+
+                        </div>
+                    </div>
+                <div class="timu" id="div_ques2">
+                        <input type="hidden" id="ipt_ques2" value="" />
+                        <h6>
+                            2.[多选题]非货币性资产包括（   ）（本题20分）</h6>
+                        <div class="ti-main">
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="A"><label>A.固定资产</label></div>
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="B"><label>B.无形资产</label></div>
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="C"><label>C.存货</label></div>
+
+                            <div>
+                                <input type="checkbox" name="options2"
+                                       onclick="checkanswer('2')" value="D"><label>D.长期股权投资</label></div>
+
+                        </div>
+                    </div>
+                <div class="timu" id="div_ques4">
+                    <input type="hidden" id="ipt_ques4" value="2158" />
+                    <h6>
+                        4.[判断题]采用公允价值对非货币性资产交换进行计量的，应当以换出资产的公允价值和应支付的相关税费作为换入资产的成本（本题20分）</h6>
+                    <div class="ti-main">
+
+                        <div>
+                            <input type="radio" name="options4"
+                                   onclick="checkanswer('4')" value="A"><label>A.正确</label></div>
+
+                        <div>
+                            <input type="radio" name="options4"
+                                   onclick="checkanswer('4')" value="B"><label>B.错误</label></div>
+
+                    </div>
+                </div>
+
+            </div>
+            &lt;!&ndash;做题区域结束&ndash;&gt;
+        </div>
+    </div>-->
+    <div class="container">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p class="panel-title">
+                </p>
+            </div>
+            <div class="panel-body" align="center">
+
+
+                <form  action="" method="post">
+                    <!--为了看着方便，border边框先设置为1-->
+                    <table id="tb" class="main" border="0">
+
+                    </table>
+                    <!--<div class="btn-group-xs"></div>-->
+                    <div class="bttons">
+                        <!--返回按钮，点击返回index.html-->
+                        <a href="myExam.html"><input  type="button" class="btn bg-danger" id="retu" value="返回"></a><!--<button  id="btn1" class="btn-sm">返回</button>-->
+                        <!--<button id="btn2" class="btn-sm" value="提交" onclick="tijiao()">提交</button>-->
+                        <!--提交按钮，点击按钮调用tijiao()方法-->
+                        <input type="button" id="sub" value="提交" class="btn btn-primary" onclick="tijiao()" style="margin-right: 20px">
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!--考题结束-->
+</div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+
+   /* //确认交卷
+    function ConfirmExam() {
+        var i = 0;
+        $(".blue").each(function () {
+            i++;
+        });
+        if (i<totalnum) {
+            alert("您还有"+(totalnum - i)+"道题未作答，请作答后提交！");
+        }
+        else {
+            var itemans = '';
+            for (var i = 1; i <= totalnum; i++) {
+                var ans = '';
+                $("input[name='options" + i + "']:checked").each(function (i) {
+                    ans += $(this).val();
+                });
+                itemans += $("#ipt_ques" + i).val() + ":" + ans + ",";
+            }
+            if (itemans.length > 1) {
+                itemans = itemans.substr(0, itemans.length - 1)
+            }
+            window.location.href="/Exam/ExamResult.aspx?cid="+179+"&aitem="+itemans;
+
+        }
+
+
+
+    }*/
+
+   /*获取到所属课程的试题*/
+   id = location.href.split("?")[1].split("=")[1];
+   //alert(id);
+   $.get('/test/testListById/'+id,function (r) {
+       for (i=0;i<r.length;i++) {
+           /*题型的判断*/
+
+           if (r[i]['answer'].split("；").length ==1) {
+               /*单选题和判断题的判别*/
+
+               /*判别是否判断题*/
+               if (r[i]['optiongroup'].split("；").length == 2) {
+
+
+                   str = ` <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[判断题]${r[i]['ques']}</td>
+                                 </tr>
+                                 `
+
+                   $('table').append(str);
+                   /*把选项组进行；分割，加入到试卷中*/
+                   for (c=0;c<r[i]['optiongroup'].split("；").length;c++) {
+
+                       value_op2=r[i]['optiongroup'].split("；")[c].split(".")[0]
+
+                       str0=`
+                                 <tr height="30px">
+                                        <td width="9%" class="text-center">
+                                            <input type="radio" name="${r[i]['testId']}" value="${value_op2}"/>
+                                        </td>
+                                        <td>${r[i]['optiongroup'].split("；")[c]}</td>
+                                  </tr>
+
+                                `
+
+                       $('table').append(str0);
+                   }
+               } else {
+
+                   /*剩下的就是单选题了*/
+
+                   str1 = `
+                            <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[单选题]${r[i]['ques']}</td>
+                            </tr>
+                            `
+
+                   $('table').append(str1);
+                   /*把选项组进行；分割，加入到试卷中*/
+                   for (a = 0;a <r[i]['optiongroup'].split("；").length;a++) {
+
+                       value_op1=r[i]['optiongroup'].split("；")[a].split(".")[0]
+
+                       str2 = `
+                                <tr height="30px">
+                                    <td width="9%" class="text-center">
+                                        <input type="radio" name="${r[i]['testId']}" value="${value_op1}"/>
+                                    </td>
+                                    <td>${r[i]['optiongroup'].split("；")[a]}</td>
+                                </tr>
+                                 `
+
+                       $('table').append(str2);
+                   }
+               }
+           } else {
+
+               /*多选题*/
+
+               str3 = `
+                            <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[多选题]${r[i]['ques']}</td>
+                            </tr>
+                            `
+
+               $('table').append(str3);
+               /*把选项组进行；分割，加入到试卷中*/
+               for (b= 0;b < r[i]['optiongroup'].split("；").length;b++) {
+
+                   value_op=r[i]['optiongroup'].split("；")[b].split(".")[0];
+
+                   str4 = `
+                                <tr height="30px">
+                                    <td width="9%" class="text-center">
+                                        <input type="checkbox" name="${r[i]['testId']}" value="${value_op}"/>
+                                    </td>
+                                    <td>${r[i]['optiongroup'].split("；")[b]}</td>
+                                </tr>
+                                 `
+
+                   $('table').append(str4);
+               }
+           }
+       }
+   },'json')
+
+   /*将学员的答案传到后台进行答案比较*/
+
+   function tijiao(){
+       $.ajax({
+           type:"post",
+           url:'/test/compareAnswer',
+           data:{"frm":$('form').serialize(),"id":id},
+           /*根据后台比较的返回值判断并给出结果*/
+           success:function(msg){
+               if (msg==true){
+                   alert("恭喜你考试成功");
+
+                   window.location.href = "exam_submit.html?id="+id+'&name='+0;
+               } else {
+                   alert("很遗憾考试失败");
+
+                   window.location.href = "exam_submit.html?id="+id+'&name='+1;
+               }
+           }
+       });
+   }
+
+   /*根据id查出来的试题总数显示到页面上*/
+
+   $.get('/test/testCountSelectById/'+id,function (r) {
+       $('.panel-title').append("(本类题共"+r+"小题。总分100分。多选、错选、不选均不得分)")
+   }, 'json')
+</script>
+
+</html>

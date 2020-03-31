@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/StudentController.java" line="201" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb19abf8-4af4-4ebb-a585-faf39fdd08f8" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="jiewei" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/videoPlay.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/myCourse.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3762">
+              <caret line="198" column="45" selection-start-line="198" selection-start-column="30" selection-end-line="198" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/exam_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/exam_submit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/myMessage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3363">
+              <caret line="177" column="74" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/personalInfo.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/perInfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3724">
+              <caret line="196" column="30" selection-start-line="196" selection-start-column="30" selection-end-line="196" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/StudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>upload</find>
+      <find>student/student</find>
+      <find>student</find>
+      <find>stuId</find>
+      <find>couId</find>
+      <find>page-header</find>
+      <find>form'</find>
+      <find>index.html</find>
+      <find>iconfont</find>
+      <find>update</find>
+      <find>laststudy</find>
+      <find>zhezhao</find>
+      <find>video</find>
+      <find>xiazai</find>
+      <find>mycourse</find>
+      <find>arr</find>
+      <find>/iffinish1/{id2}</find>
+      <find>situation</find>
+      <find>find</find>
+      <find>findByStuId1</find>
+      <find>status</find>
+      <find>iffinish</find>
+      <find>player</find>
+      <find>.setvid</find>
+      <find>vidI</find>
+      <find>arr[k]</find>
+      <find>http://localhost:8080</find>
+      <find>etvideonamelist</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\硕士\研一\培训学校项目第二版\jiewei\src\main\resources\static\student</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/inteceptor/LoginIntecpeptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/configure/Demo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/myMessageUnread1.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/exam.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/VideoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/mapper/VideoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/service/impl/VideoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/service/VideoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/JieweiApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/configure/PageHelperConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/admin/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/util/MyWebAppConfigurer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/util/ToInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/util/RestUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/util/md5.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/entity/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/configure/MywebConfigure.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/zhuye.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/myAnswer.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/studyReport.html" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/entity/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/entity/SelCou.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/util/HttpClientToInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/entity/Video.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/playVideo.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/myExam.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/courseCenter.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/admin/uploadvideo.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/messageReply.html" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/AdminMessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/DownLoadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/SelCouController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/ShareController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/StuMessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/TestnameController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/VideoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/videoPlay.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/myCourse.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/exam_list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/exam_submit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/myMessage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/student/perInfo.html" />
+        <option value="$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/StudentController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jiewei" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jiewei" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="1770" />
+    <option name="height" value="985" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiewei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jiewei" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581779913856" />
+    <property name="last_opened_file_path" value="F:/Github/酒店APP" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.37862068" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\硕士\研一\培训学校项目第二版\jiewei\src\main\resources\static\student" />
+      <recent name="D:\硕士\研一\培训学校项目第二版\jiewei\src\main\resources\static" />
+      <recent name="D:\硕士\研一\培训学校项目第二版\jiewei\src\main\resources\static\img" />
+      <recent name="D:\硕士\研一\培训学校项目第二版\jiewei\src\main\resources\static\fonts" />
+      <recent name="D:\硕士\研一\培训学校项目第二版\jiewei\src\main\resources\static\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="yjs.tyust.edu.cn.jiewei.controller" />
+      <recent name="yjs.tyust.edu.cn.jiewei.service" />
+      <recent name="yjs.tyust.edu.cn.jiewei.service.impl" />
+      <recent name="yjs.tyust.edu.cn.jiewei.mapper" />
+      <recent name="yjs.tyust.edu.cn.jiewei.entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\jiewei\src\main\resources\static\js\plugins" />
+      <recent name="D:\IDEA_workspace\jiewei\src\main\resources\static\admin" />
+      <recent name="E:\Work\idea\jiewei\src\main\resources\static\student" />
+      <recent name="E:\Work\idea\jiewei\src\main\resources\static" />
+      <recent name="E:\Work\idea\jiewei\src\main\resources\static\admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.JieweiApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="yjs.tyust.edu.cn.jiewei.generator.CodeGenerator" />
+      <module name="jiewei" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yjs.tyust.edu.cn.jiewei.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="yjs.tyust.edu.cn.jiewei.configure.Demo" />
+      <module name="jiewei" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yjs.tyust.edu.cn.jiewei.configure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpClientToInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="yjs.tyust.edu.cn.jiewei.util.HttpClientToInterface" />
+      <module name="jiewei" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yjs.tyust.edu.cn.jiewei.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="yjs.tyust.edu.cn.jiewei.util.RestUtil" />
+      <module name="jiewei" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yjs.tyust.edu.cn.jiewei.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="md5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="yjs.tyust.edu.cn.jiewei.util.md5" />
+      <module name="jiewei" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yjs.tyust.edu.cn.jiewei.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JieweiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jiewei" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="yjs.tyust.edu.cn.jiewei.JieweiApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="Application.Demo" />
+      <item itemvalue="Application.md5" />
+      <item itemvalue="Application.RestUtil" />
+      <item itemvalue="Application.HttpClientToInterface" />
+      <item itemvalue="Spring Boot.JieweiApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HttpClientToInterface" />
+        <item itemvalue="Application.md5" />
+        <item itemvalue="Application.RestUtil" />
+        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.CodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb19abf8-4af4-4ebb-a585-faf39fdd08f8" name="Default Changelist" comment="" />
+      <created>1559010530760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559010530760</updated>
+      <workItem from="1559010537812" duration="1659000" />
+      <workItem from="1559012242119" duration="537000" />
+      <workItem from="1559012840182" duration="1745000" />
+      <workItem from="1559014653816" duration="4789000" />
+      <workItem from="1559050238799" duration="596000" />
+      <workItem from="1559129611700" duration="6003000" />
+      <workItem from="1559197499833" duration="19498000" />
+      <workItem from="1559302264199" duration="783000" />
+      <workItem from="1559306650554" duration="4550000" />
+      <workItem from="1559351936877" duration="123000" />
+      <workItem from="1559352125533" duration="13922000" />
+      <workItem from="1559371734211" duration="11943000" />
+      <workItem from="1559395418596" duration="6178000" />
+      <workItem from="1559401676015" duration="399000" />
+      <workItem from="1559402106000" duration="5876000" />
+      <workItem from="1559437760621" duration="14733000" />
+      <workItem from="1559463064130" duration="1159000" />
+      <workItem from="1559464346046" duration="2363000" />
+      <workItem from="1559470192479" duration="171000" />
+      <workItem from="1559643442289" duration="10124000" />
+      <workItem from="1559706056902" duration="22256000" />
+      <workItem from="1559786929588" duration="48000" />
+      <workItem from="1559810292767" duration="8055000" />
+      <workItem from="1559893907549" duration="19042000" />
+      <workItem from="1560001697650" duration="6243000" />
+      <workItem from="1560053401614" duration="25000" />
+      <workItem from="1560164405673" duration="1730000" />
+      <workItem from="1560310825142" duration="1591000" />
+      <workItem from="1560396625498" duration="7662000" />
+      <workItem from="1560496090666" duration="335000" />
+      <workItem from="1560496640974" duration="13301000" />
+      <workItem from="1560560997342" duration="3218000" />
+      <workItem from="1560592514775" duration="2074000" />
+      <workItem from="1560646696952" duration="4702000" />
+      <workItem from="1560652550798" duration="13246000" />
+      <workItem from="1560673495436" duration="7546000" />
+      <workItem from="1560740176540" duration="5176000" />
+      <workItem from="1560756153099" duration="3629000" />
+      <workItem from="1560760101395" duration="770000" />
+      <workItem from="1560761632229" duration="5660000" />
+      <workItem from="1560769471230" duration="102000" />
+      <workItem from="1560816148813" duration="10516000" />
+      <workItem from="1560853453015" duration="4696000" />
+      <workItem from="1560904306202" duration="4684000" />
+      <workItem from="1561021724516" duration="1102000" />
+      <workItem from="1561026026235" duration="7536000" />
+      <workItem from="1561081801289" duration="1458000" />
+      <workItem from="1561165806378" duration="2270000" />
+      <workItem from="1561168160145" duration="10593000" />
+      <workItem from="1561184084457" duration="14388000" />
+      <workItem from="1561251893539" duration="10883000" />
+      <workItem from="1561272662313" duration="9836000" />
+      <workItem from="1561286800779" duration="2455000" />
+      <workItem from="1561348336355" duration="5472000" />
+      <workItem from="1561361018350" duration="1243000" />
+      <workItem from="1561447164063" duration="14964000" />
+      <workItem from="1561521432108" duration="14170000" />
+      <workItem from="1561541756415" duration="628000" />
+      <workItem from="1561558511984" duration="3162000" />
+      <workItem from="1561640356579" duration="1094000" />
+      <workItem from="1561720625180" duration="3482000" />
+      <workItem from="1561990703797" duration="2568000" />
+      <workItem from="1562027088466" duration="10515000" />
+      <workItem from="1562076166249" duration="3646000" />
+      <workItem from="1562116536310" duration="4471000" />
+      <workItem from="1562138007966" duration="596000" />
+      <workItem from="1562170403806" duration="599000" />
+      <workItem from="1562343616751" duration="5686000" />
+      <workItem from="1562377751628" duration="31506000" />
+      <workItem from="1562461913707" duration="32866000" />
+      <workItem from="1562504928752" duration="4251000" />
+      <workItem from="1562510022744" duration="6918000" />
+      <workItem from="1562548834562" duration="12200000" />
+      <workItem from="1562647303546" duration="13018000" />
+      <workItem from="1562660535693" duration="16321000" />
+      <workItem from="1562723947743" duration="626000" />
+      <workItem from="1562727585873" duration="2570000" />
+      <workItem from="1562746753500" duration="1485000" />
+      <workItem from="1562768900254" duration="1661000" />
+      <workItem from="1562810775839" duration="19878000" />
+      <workItem from="1562923868424" duration="1874000" />
+      <workItem from="1563011702848" duration="1355000" />
+      <workItem from="1563023922735" duration="1401000" />
+      <workItem from="1563071976128" duration="6032000" />
+      <workItem from="1563155266422" duration="5430000" />
+      <workItem from="1563365904039" duration="1694000" />
+      <workItem from="1563543789132" duration="2235000" />
+      <workItem from="1563587869992" duration="9565000" />
+      <workItem from="1563676242267" duration="15403000" />
+      <workItem from="1563760446475" duration="10620000" />
+      <workItem from="1564108527682" duration="3989000" />
+      <workItem from="1564112552612" duration="6606000" />
+      <workItem from="1564120112797" duration="11013000" />
+      <workItem from="1564146031782" duration="2548000" />
+      <workItem from="1564195169096" duration="3539000" />
+      <workItem from="1564281353892" duration="26017000" />
+      <workItem from="1564555928943" duration="1145000" />
+      <workItem from="1566206776453" duration="1332000" />
+      <workItem from="1566379292864" duration="8155000" />
+      <workItem from="1566699597076" duration="4978000" />
+      <workItem from="1566787213850" duration="2019000" />
+      <workItem from="1566884736693" duration="277000" />
+      <workItem from="1566885035260" duration="253000" />
+      <workItem from="1566885388856" duration="1094000" />
+      <workItem from="1566886505491" duration="5893000" />
+      <workItem from="1566998083574" duration="708000" />
+      <workItem from="1566999206573" duration="1256000" />
+      <workItem from="1567739859168" duration="3778000" />
+      <workItem from="1571646184238" duration="620000" />
+      <workItem from="1572513906276" duration="145000" />
+      <workItem from="1581767384352" duration="1736000" />
+      <workItem from="1582967779042" duration="1025000" />
+      <workItem from="1583208782660" duration="1066000" />
+      <workItem from="1584109175572" duration="1304000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="JieweiApplicationTests_list - 2019.05.30 at 15h 02m 58s.xml">
+      <configuration name="JieweiApplicationTests.list" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JieweiApplicationTests_list - 2019.05.30 at 15h 13m 41s.xml">
+      <configuration name="JieweiApplicationTests.list" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JieweiApplicationTests_remove - 2019.05.30 at 15h 31m 16s.xml">
+      <configuration name="JieweiApplicationTests.remove" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JieweiApplicationTests - 2019.06.23 at 13h 57m 01s.xml">
+      <configuration name="JieweiApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JieweiApplicationTests - 2019.06.23 at 13h 57m 13s.xml">
+      <configuration name="JieweiApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JieweiApplicationTests - 2019.06.23 at 16h 39m 57s.xml">
+      <configuration name="JieweiApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="675680000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49658313" visible="true" weight="0.25159913" />
+      <window_info id="Structure" order="1" sideWeight="0.5023148" side_tool="true" weight="0.21503638" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50341684" side_tool="true" weight="0.24333064" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49946696" weight="0.34236187" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32809773" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32984293" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.5135428" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.2524377" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32984293" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Problems" order="15" weight="0.32984293" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.2489339" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3283582" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32983023" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/VideoController.java</url>
+          <line>195</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/VideoController.java</url>
+          <line>230</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jiewei$JieweiApplication.ic" NAME="JieweiApplication Coverage Results" MODIFIED="1561173989278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/mapper/SelCouMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/mapper/CourseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/util/HttpClientToInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="121" column="87" selection-start-line="121" selection-start-column="76" selection-end-line="121" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/course_content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="77" column="17" selection-end-line="77" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/zhuye.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7614">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#893#899#1" expanded="true" />
+            <element signature="e#926#932#0" expanded="true" />
+            <element signature="e#932#938#0" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#894#900#1" expanded="true" />
+            <element signature="e#927#933#0" expanded="true" />
+            <element signature="e#933#939#0" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#894#900#1" expanded="true" />
+            <element signature="e#927#933#0" expanded="true" />
+            <element signature="e#933#939#0" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#894#900#1" expanded="true" />
+            <element signature="e#927#933#0" expanded="true" />
+            <element signature="e#933#939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/Result/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/video_list_top.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/playVideo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2409">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/myExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="338" column="21" selection-start-line="338" selection-start-column="21" selection-end-line="338" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/courseCenter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5168">
+          <caret line="272" column="39" selection-start-line="272" selection-start-column="39" selection-end-line="272" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/editVideo.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/videoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/uploadvideo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2603">
+          <caret line="137" column="201" selection-start-line="137" selection-start-column="201" selection-end-line="137" selection-end-column="201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/entity/Video.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/entity/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/Result/UploadResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/ad_course_xuanke.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2186" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/messageReply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/service/impl/VideoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/service/VideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/mapper/VideoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/VideoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/inteceptor/LoginIntecpeptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/service/impl/AdminMessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/AdminMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/DownLoadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/SelCouController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/ShareController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/StuMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/TestnameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Github/酒店APP/quadraL/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/videoPlay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/myCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3762">
+          <caret line="198" column="45" selection-start-line="198" selection-start-column="30" selection-end-line="198" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/exam_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/exam_submit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/myMessage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3363">
+          <caret line="177" column="74" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/personalInfo.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/student/perInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3724">
+          <caret line="196" column="30" selection-start-line="196" selection-start-column="30" selection-end-line="196" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/yjs/tyust/edu/cn/jiewei/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>unnamed</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37862068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37862068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37862068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37862068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>jiewei</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37862068" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37862068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>视频管理</title>
+    <link rel="shortcut icon" href=""> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+
+<body class="gray-bg">
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <a href="videoList.html" type="button" class="btn btn-primary"> &nbsp;返回</a>
+
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <div class="page-header">
+                <h3>修改视频 &nbsp;</h3>
+            </div>
+
+            <form >
+                <table class="table table-hover table-striped">
+                    <tr>
+                        <td><input type="hidden" name="vidId">
+                            <label for="" class="control-label">视频名称</label></td>
+                        <td> <input type="text" name="vidName" id="vidName" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="" >所属课程</label>
+                            <input type="text" name="couId" id="couId"></td>
+                        <td> <a href="javascript:;" onclick="check()">验证</a>
+                            <input type="text" name="couName" id="couName" >
+                            <input type="text" name="teacher" id="teacher" ></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="">视频顺序</label></td>
+                        <td><input type="text" name="sort" id="sort" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><input id="sub" type="button" value="提交" class="btn btn-primary"></td>
+                        <td></td>
+                    </tr>
+
+                       <!-- <input type="hidden" name="vidId">
+                        <label for="" class="control-label">视频名称</label>
+                        <input type="text" name="vidName" id="vidName" class="form-control">
+                        <br>
+                        <label for="" class="control-label">所属课程</label>
+                        <input type="text" name="couId" id="couId">
+                        <a href="javascript:;" onclick="check()">验证</a>
+                        <input type="text" name="couName" id="couName">
+                        <input type="text" name="teacher" id="teacher">
+                        <br>
+                        <label for="">视频顺序</label>
+                        <input type="text" name="sort" id="sort" class="form-control">
+                        <br>
+                        <input id="sub" type="button" value="提交">-->
+
+                </table>
+
+
+
+            </form>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- 全局js -->
+<!--<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>-->
+
+<!-- 自定义js -->
+<!--<script src="js/content.js?v=1.0.0"></script>-->
+
+
+<!--<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>-->
+<!--统计代码，可删除-->
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+    id=location.href.split("?")[1].split("=")[1]
+    alert(id)
+    $.get('/video/getById/'+id,function (r) {//调用videoController中的getById方法，返回r为一个查询到的video BY 徐超
+        $('[name=vidName]').val(r.vidName)
+        $('[name=couId]').val(r.couId)
+        $('[name=sort]').val(r.sort)
+        $('[name=vidId]').val(r.vidId)
+    },'json')
+
+    function check() {
+        var value = document.getElementById("couId").value;
+        alert("查询中，没有将不显示内容")
+        document.getElementById("couName").value = "";
+        document.getElementById("teacher").value = "";
+        $.get('/course/check/'+value,function (r) {//调用courseController中的check方法，返回r为一个course BY 徐超
+            if (r.couId==value) {
+
+                alert("查询成功");
+                // alert(r.couName)
+                document.getElementById("couName").value = r.couName;
+                document.getElementById("teacher").value = r.teacher;
+            } else{
+                document.getElementById("couName").value = "没有此课程";
+            }
+        }, 'json');
+
+    }
+
+    $('#sub').click(function () {
+        alert($('form').serialize())
+        $.post('/video/edit',$('form').serialize(),function (r) {//调用videoController中的edit方法，返回r为真假 BY 徐超
+            if(r){
+                alert('修改成功')
+            }else{
+                alert('修改失败')
+            }
+        },'json')
+    })
+</script>
+</html>

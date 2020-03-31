@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>帮助中心</title>
+    <!--webSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+
+    <!--webSiteJs-->
+    <link rel="stylesheet" href="../js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="../js/jquery-3.3.1.js"/>
+    <link rel="stylesheet" href="../js/script.js"/>
+    <link rel="stylesheet" href="../js/jquery.SuperSlide.2.1.js"/>
+
+</head>
+<body>
+<!--导航部分-->
+<div class="navbar navbar-default top">
+    <div class="container">
+        <div class="row">
+            <!--导航栏标题-->
+            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 navbar-header">
+                <div class="col-lg-1 col-xs-1 col-sm-1 col-md-1">
+                    <!--<img src="../images/a.png" alt=""/>-->
+                </div>
+                <div class="col-lg-4 col-xs-4 col-sm-4 col-md-4 ">
+                    <h1><span class="name">杰威培训学校</span></h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航部分-->
+
+<div class="main">
+    <div class="container">
+        <div class="jyxq-box">
+            <div class="lib_Menubox_sx ">
+                <ul>
+                    <li id="one1" onclick="setTab('one',1,5)" class="hover">培训流程</li>
+                    <li id="one2" onclick="setTab('one',2,5)">操作演示</li>
+                    <li id="one3" onclick="setTab('one',3,5)">培训须知</li>
+                    <li id="one4" onclick="setTab('one',4,5)">联系我们</li>
+                </ul>
+            </div>
+            <div class="lib_Contentbox_sx ">
+                <div id="con_one_1">
+                    <div class="text">
+                        <h3>一、登录和新用户注册</h3>
+                        <div class="nr-text">
+                            1、登录网址：http://www.sxacc.cn<br>
+                            2、新用户登录<br>
+                            学员登录信息：登录帐号为证书档案号<br>
+                            如下图所示：
+                            <img src="../img/helpcenter/help.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="con_one_2" style="display:none">
+                    <div class="notice-czys">
+                        <div class="tab-hd">
+                            <ul class="tab-nav">
+                                <li>用户登录</li>
+                                <li>在线缴费</li>
+                                <li>在线选课</li>
+                                <li>在线学习</li>
+                                <li>在线考试</li>
+                                <li>申请发票</li>
+                            </ul>
+                        </div>
+                        <div class="tab-bd">
+                            <div class="tab-pal">
+                                <div>
+                                    用户登录
+                                </div>
+                            </div>
+                            <div class="tab-pal">
+                                <div>
+                                    在线缴费
+                                </div>
+                            </div>
+                            <div class="tab-pal">
+                                <div>
+                                    在线选课
+                                </div>
+                            </div>
+                            <div class="tab-pal">
+                                <div>
+                                    在线学习
+                                </div>
+                            </div>
+                            <div class="tab-pal">
+                                <div>
+                                    在线考试
+                                </div>
+                            </div>
+                            <div class="tab-pal">
+                                <div>
+                                    申请发票
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        jQuery(".notice-czys").slide({ titCell: ".tab-hd li", mainCell: ".tab-bd", delayTime: 0 });
+                    </script>
+                </div>
+                <div id="con_one_3" style="display:none">
+                    <h6>一、注册须知</h6>
+                    <p>第一次登录培训平台的学员必须按照要求输入证书档案号码进行报名验证。</p>
+                    <h6>二、选课须知</h6>
+                    <p>学员登录成功后进入选课环节，请根据实际情况选择相对应的学习类型。</p>
+                    <h6>三、缴费须知</h6>
+                    <p>学员在选择完课程后可以进入缴费模块。</p>
+                    <p>缴费方式为：网银支付具体操作说明如下：</p>
+                    <p>1、网银支付</p>
+                    <p>学员只须根据系统的提示输入相关的缴费信息即可。网银缴费成功后，系统将自动为您开通学习考试权限。</p>
+                    <h6>四、学习须知</h6>
+                    <p>最终的考核结果由课堂练习（视频播放过程中会弹出）和考试（学完所有课程后的考试）两部分组成，课堂练习和考试各占50%，所以请认真作答在视频播放过程中弹出的课堂练习题。</p>
+                    <h6>五、证书颁发</h6>
+                    <p>考核合格后，学员可在培训证明页面查看并打印学习记录凭证。</p>
+                </div>
+                <div id="con_one_4" style="display:none">
+                    <p class="fs20"><img src="img/phone_c9e6ee72d9.png" alt=" " class="phone">客服热线<span class="t-r pl20 fs30">0351-7210826</span></p>
+                    <div class="bor-dt">
+                        <p><span class="left-txt">主管单位：</span>山西省会计人员继续教育网</p>
+                        <p><span class="left-txt">联系电话：</span>0351-7210826（请在工作时间内联系）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    <!--
+    function setTab(name, cursel, n) {
+        for (i = 1; i <= n; i++) {
+            var menu = document.getElementById(name + i);
+            var con = document.getElementById("con_" + name + "_" + i);
+            menu.className = i == cursel ? "hover" : "";
+            con.style.display = i == cursel ? "block" : "none";
+        }
+    }
+    //-->
+</script>
+</html>

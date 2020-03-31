@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考试成功页面</title>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/script.js"></script>
+
+    <style>
+        .main{
+            font-size: large;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="navbar navbar-default">
+    <div class="container">
+        <!--导航栏标题-->
+        <div class="navbar-header">
+            <h1>随堂练习</h1>
+            <h2>山西省会计人员继续教育</h2>
+
+        </div>
+    </div>
+</div>
+<!--主页 按钮-->
+
+<div class="container btn-wrapper" >
+    <a href="myExam.html"><button class="btn-lg">返回</button></a>
+</div>
+<!--2  8   2-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <p class="panel-title"><h2 class="h"></h2>
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <div class="row" align="center">
+
+
+                                <table id="tb" class="main" border="1">
+
+                                </table>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    /*获取到所属课程的试题*/
+    //alert(location.href);
+    id = location.href.split("?")[1].split("=")[1].split("&")[0];
+
+    $.get('/test/testListById/'+id,function (r) {
+        for (i=0;i<r.length;i++) {
+            //题型的判断
+            if (r[i]['answer'].split("；").length ==1) {
+                //单选题和判断题的判别
+                //判别是否判断题
+                if (r[i]['optiongroup'].split("；").length == 2) {
+
+
+                    str = ` <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[判断题]${r[i]['ques']}</td>
+                                 </tr>
+                                 `
+                    $('table').append(str);
+                    /*把选项组进行；分割，加入到试卷中*/
+                    for (c=0;c<r[i]['optiongroup'].split("；").length;c++) {
+                        /*将选项组里的分割，找到ABCD...*/
+                        value_op=r[i]['optiongroup'].split("；")[c].split(".")[0]
+                        /*初始化检查选项*/
+                        checked_op=""
+                        /*判断value_op是否在正确答案中，如果在，就自动将选项添加checked*/
+                        if(r[i]['answer'].indexOf(value_op)!=-1){
+                            checked_op="checked=\"checked\""
+                        }
+
+                        str0=`
+                                 <tr height="30px">
+                                        <td width="9%" class="text-center">
+                                            <input type="radio" ${checked_op} name="${r[i]['testId']}" value="${value_op}"/>
+                                        </td>
+                                        <td>${r[i]['optiongroup'].split("；")[c]}</td>
+                                  </tr>
+
+                                `
+
+                        $('table').append(str0);
+                    }
+                    /*加入解析，字体红色*/
+                    str5=`
+                                 <tr height="30px" style="color: red">
+                                        <td width="9%" class="text-center">
+                                             解析：
+                                        </td>
+                                        <td>${r[i]['ana']}</td>
+                                  </tr>
+
+                                `
+                    $('table').append(str5);
+                } else {
+                    //剩下的就是单选题了
+                    str1 = `
+                            <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[单选题]${r[i]['ques']}</td>
+                            </tr>
+                            `
+
+                    $('table').append(str1);
+                    /*把选项组进行；分割，加入到试卷中*/
+                    for (a = 0;a <r[i]['optiongroup'].split("；").length;a++) {
+                        /*将选项组里的分割，找到ABCD...*/
+                        value_op1=r[i]['optiongroup'].split("；")[a].split(".")[0]
+
+                        /*初始化检查选项*/
+                        checked_op1="";
+                        /*判断value_op是否在正确答案中，如果在，就自动将选项添加checked*/
+                        if(r[i]['answer'].indexOf(value_op1)!=-1){
+                            checked_op1="checked=\"checked\""
+                        }
+
+                        str2 = `
+                                <tr height="30px">
+                                    <td width="9%" class="text-center">
+                                        <input type="radio" ${checked_op1} name="${r[i]['testId']}" value="${value_op1}"/>
+                                    </td>
+                                    <td>${r[i]['optiongroup'].split("；")[a]}</td>
+                                </tr>
+                                 `
+
+                        $('table').append(str2);
+                    }
+                    /*加入解析，字体红色*/
+                    str6=`
+                                 <tr height="30px" style="color: red">
+                                        <td width="9%" class="text-center">
+                                             解析：
+                                        </td>
+                                        <td>${r[i]['ana']}</td>
+                                  </tr>
+
+                                `
+                    $('table').append(str6);
+                }
+            } else {
+
+                //多选题
+                str3 = `
+                            <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[多选题]${r[i]['ques']}</td>
+                            </tr>
+                            `
+
+                $('table').append(str3);
+                /*把选项组进行；分割，加入到试卷中*/
+                for (b= 0;b < r[i]['optiongroup'].split("；").length;b++) {
+                    /*将选项组里的分割，找到ABCD...*/
+                    value_op2=r[i]['optiongroup'].split("；")[b].split(".")[0];
+                    /*初始化检查选项*/
+                    checked_op2="";
+                    /*判断value_op是否在正确答案中，如果在，就自动将选项添加checked*/
+                    if(r[i]['answer'].indexOf(value_op2)!=-1){
+                        checked_op2="checked=\"checked\""
+                    }
+
+                    str4 = `
+                                <tr height="30px">
+                                    <td width="9%" class="text-center">
+                                        <input type="checkbox" ${checked_op2} name="${r[i]['testId']}" value="${value_op2}"/>
+                                    </td>
+                                    <td>${r[i]['optiongroup'].split("；")[b]}</td>
+                                </tr>
+                                 `
+
+                    $('table').append(str4);
+                }
+                /*加入解析，字体红色*/
+                str7=`
+                                 <tr height="30px" style="color: red">
+                                        <td width="9%" class="text-center">
+                                             解析：
+                                        </td>
+                                        <td>${r[i]['ana']}</td>
+                                  </tr>
+
+                                `
+                $('table').append(str7);
+            }
+        }
+    },'json')
+
+
+</script>
+<script>
+    var huy =location.href.split("=")[2];
+    //alert(huy);
+    if (huy == 0){
+        $(".h").append("恭喜你！考试成功");
+    }else if (huy == 1) {
+        $(".h").append("很遗憾考试失败！");
+    }
+</script>
+</html>

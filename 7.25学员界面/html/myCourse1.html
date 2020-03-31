@@ -1,0 +1,298 @@
+<!--选课中心-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>个人中心-我的课程</title>
+    <!--webSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css"/>
+
+    <!--webSiteJs-->
+    <link rel="stylesheet" href="../js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="../js/jquery-3.3.1.js"/>
+    <link rel="stylesheet" href="../js/script.js"/>
+    <link rel="stylesheet" href="../js/PageBar.js"/>
+
+    <style type="text/css">
+        .pages a{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container" style="padding-left: 0px; padding-right: 0px;">
+        <div class="header_top">
+            <div class="pull-left header_top_left">
+                欢迎您来到杰威培训学校!</div>
+            <div class="pull-right header_top_right">
+                <span id="ctl09_loginstate" class="header_top_login" style="font-size:14px;">欢迎您：秦艳 </span>
+                <a href="myCourse.html" class="header_top_login" style=" margin-left:20px;">个人中心</a>|<a href="login.html" class="header_top_login" style="margin-left:20px;">退出</a><a href="" class="header_top_phone"><i class="icon iconfont icon-dianhua"></i>客服电话:0351-7210826</a>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="pull-left logo">
+                <h1>
+                    <img src="../images/logo.png" alt=""></h1>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="box content">
+        <div class="content-lf">
+            <ul>
+                <li><a href="myCourse.html" class="content-lf-icon1">我的课程</a></li>
+                <li><a href="courseCenter.html" class="content-lf-icon2">选课中心</a></li>
+                <li><a href="myExam.html" class="content-lf-icon3">考试中心</a></li>
+                <li><a href="studyReport.html" class="content-lf-icon4">学分报告</a></li>
+                <li><a href="myMessage.html" class="content-lf-icon5">我的问题</a></li>
+                <li><a href="#" class="content-lf-icon7">我的订单</a></li>
+                <li><a href="myAnswer.html" class="content-lf-icon6">提交工单</a></li>
+                <li><a href="perInfo.html" class="content-lf-icon8">基本信息</a></li>
+            </ul>
+        </div>
+
+        <div class="content-rg">
+            <div class="xxbg">
+                <div class="xxbg-top">
+                    <span class="span1">我的课程 </span>
+                    <span class="span1">
+                    <a id="year_2018" href="" class="sel_btn" style="">2018</a>
+                    <a href="" class="sel_btn1">选择其他年度课程</a> </span>
+                </div>
+                <div class="xxbg-center">
+                    <ul class="list1">
+                        <li><span>
+                        51</span>
+                            <p>
+                                已选课程</p>
+                        </li>
+                        <li><span>
+                        90</span>
+                            <p>
+                                已选学分</p>
+                        </li>
+                        <li><span>
+                        90</span>
+                            <p>
+                                完成学分</p>
+                        </li>
+                        <li class="li2"><span>
+                        合格</span>
+                            <p>
+                                培训状态</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="xxbg-bt" style="line-height:40px;">
+                    山西省继续教育规定2018年度，课程为90学分，请选择课程后，进入学习<a href="/Course/ChoiceCourse.aspx">选课中心</a>
+                    <br />
+                </div>
+            </div>
+            <div class="xxbg">
+                <div class="xxbg-top">
+                    <span class="span1">最近学习 </span>
+                </div>
+                <div class="zjxx">
+                    <div class="list1">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td class="td1">
+                                    <img src="../img/course/209.png" alt=""  style=" width:185px; height:108px;">
+                                </td>
+                                <td class="td2">
+                                    <h5>
+                                        <a href="../html/videoPlay.html">
+                                            会计报表格式修订项目讲解</a></h5>
+                                    <div class="jindu">
+                                        <span class="span1">进度</span> <span class="span2">
+                                            <div style="width: 0.29%">
+                                            </div>
+                                        </span><span class="span1" style="width: 80px; padding-left: 5px;">
+                                            0.29%</span>
+                                    </div>
+                                    <div class="renshu">
+                                        <span>
+                                            7.24</span> 学分
+                                    </div>
+                                </td>
+                                <td>
+
+                                    <span class="zt">状态：<em class="em1">正在学习</em></span> <a href="../html/videoPlay.html" class="link2">继续学习</a>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="xxbg">
+                <div class="xxbg-top">
+                    <span class="span1">最近学习 </span>
+                </div>
+                <div class="zjxx">
+                    <div class="list2">
+                        <table id="show_tab">
+                            <thead style="display: none">
+                            <tr>
+                                <td>图片</td>
+                                <td>课程</td>
+                                <td>状态</td>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(".content-lf ul li a").click(function(){
+            $("#a_leader_txt").text($(this).text());
+            $(".content-lf ul li a").removeClass("on");
+            $(this).addClass("on");
+        })
+    });
+</script>
+
+<div style="text-align:center;">
+</div>
+</body>
+<script src="../js/dataTables.bootstrap.min.js"></script>
+<script>
+    var Lang = {
+        "sProcessing": "数据正在加载中...",
+        "sLengthMenu": "每页 _MENU_ 项",
+        "sZeroRecords": "没有匹配结果",
+        "sInfo": "当前显示第 _START_ 至 _END_ 项，共 _TOTAL_ 项。",
+        "sInfoEmpty": "当前显示第 0 至 0 项，共 0 项",
+        "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+        "sInfoPostFix": "",
+        "sSearch": "搜索:",
+        "sUrl": "",
+        "sEmptyTable": "暂无数据",
+        "sLoadingRecords": "载入中...",
+        "sInfoThousands": ",",
+        "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页",
+            "sJump": "跳转"
+        }
+    };
+    var URL = "../test.json";
+    $("#show_tab").dataTable({
+        searching:false,
+        iDisplayLength: 5, //默认每页数量
+        pagesize:5,
+        lengthChange: false,
+        language: Lang, //提示信息
+        stripeClasses: ["odd", "even"], //为奇偶行加上样式，兼容不支持CSS伪类的场合
+        renderer: "bootstrap", //渲染样式：Bootstrap和jquery-ui
+        pagingType: "simple_numbers", //分页样式：simple,simple_numbers,full,full_numbers
+        ajax: function (data, callback, settings) {
+            //ajax请求数据
+            $.ajax({
+                type: "get",
+                url: URL,
+                cache: false, //禁用缓存
+                dataType: "json",
+                success: function (result) {
+//					console.log(param);
+                    //封装返回数据
+                    var returnData = {
+                        data: [],
+                        recordsTotal: 0,
+                        recordsFiltered: 0
+                    };
+                    if (result.success) {
+                        returnData.draw = data.draw; //这里直接自行返回了draw计数器,应该由后台返回
+                        returnData.recordsTotal = result.totalCount; //返回数据全部记录
+                        returnData.recordsFiltered = result.totalCount; //后台不实现过滤功能，每次查询均视作全部结果
+                        returnData.data = result.res; //返回的数据列表
+                        //调用DataTables提供的callback方法，代表数据已封装完成并传回DataTables进行渲染
+                        //此时的数据需确保正确无误，异常判断应在执行此回调前自行处理完毕
+                    }
+                    callback(returnData);
+                }
+            });
+        },
+
+        //列表表头字段
+        columns: [
+            {"data": "imgSrc", "defaultContent": ""},
+            {"data": ""},
+            {"data": ""},
+        ],
+        columnDefs: [
+            {
+                targets: [0],
+                render: function (data, type, full) {
+                    return '<img src="http://file.sxacc.cn/upload/kecheng/170.png" alt="" style=" width:185px; height:108px;">'
+
+                }
+
+            },
+            {
+                targets: [1],
+                render: function (data, type, full) {
+                    return `
+                    <h5>
+                    <a href="../html/videoPlay.html">${full.course}</a>
+                            </h5>
+                            <div class="xuetime">
+                            <span>总计学分:${full.xuefen}</span>|
+                    <span>已满学分：0</span>
+                    </div>
+                    <div class="jindu">
+                            <span class="span1">进度</span>
+                            <span class="span2">
+                            <div style="width: 0.29%">
+                            </div>
+                            </span>
+                            <span class="span1" style="width: 80px; padding-left: 5px;">0.29%</span>
+                            </div>
+                            `
+
+                }
+            },
+            {
+                targets: [2],
+                render: function (data, type, full) {
+                    if (full.zt == 0) {
+                        return `<span class="zt">状态：<em class="em1">未学习</em><a href="../html/videoPlay.html" class="link2">开始学习</a>`;
+                    }else if (full.zt == 1) {
+                        return `<span class="zt">状态：<em class="em1">正在学习</em><a href="../html/videoPlay.html" class="link2">继续学习</a>`;
+
+                    }
+
+                }
+            }
+
+        ]
+    }).api();
+</script>
+</html>

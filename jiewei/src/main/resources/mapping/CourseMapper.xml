@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjs.tyust.edu.cn.jiewei.mapper.CourseMapper">
+
+    <select id="getByCourseName" resultType="yjs.tyust.edu.cn.jiewei.entity.Course">
+    select *
+    from course
+    where cou_name = #{coursename}
+</select>
+
+    <select id="selectInfo" resultMap="base">
+    select sel_cou.cou_id,course.cou_name,sel_cou.stu_statu,sel_cou.situation
+    from sel_cou
+    left join student on sel_cou.stu_id = student.stu_id
+    left join course on sel_cou.cou_id = course.cou_id
+    where student.stu_id=#{id}
+</select>
+
+    <resultMap id="base" type="yjs.tyust.edu.cn.jiewei.entity.Course">
+        <id property="couId" column="cou_id"></id>
+        <result property="couName" column="cou_name"></result>
+
+        <collection property="selCou" javaType="yjs.tyust.edu.cn.jiewei.entity.SelCou">
+            <id property="couId" column="cou_id"></id>
+            <result property="stuStatu" column="stu_statu"></result>
+            <result property="situation" column="situation"></result>
+
+        </collection>
+
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+
+    <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js">
+
+    </script>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <form class="bs-example bs-example-form" role="form">
+                <div class="page-header">
+                    <h4>基本信息</h4>
+                </div>
+
+
+                <input type="hidden" name="stuId" class="form-control" style="width: 200px">
+
+                <div class="input-group ">
+                    <span class="input-group-addon">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                    <input type="text" name="stuName" class="form-control" style="width: 200px">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">身份证号</span>
+                    <input type="text" name="idcard" class="form-control" style="width: 200px">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">手&nbsp;&nbsp;机&nbsp;&nbsp;号</span>
+                    <input type="text" name="phoneNum" class="form-control" style="width:200px">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">所在单位</span>
+                    <input type="text" name="company" class="form-control" style="width:200px">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">缴费状态</span>
+                    <div style="margin:0 10px;float: left">
+                        <input type="radio" name="jiaofei" id="jiaofeitrue" value="已交">
+                        <label for="jiaofeitrue">已交</label>
+                    </div>
+                    <div style="float: left">
+                        <input type="radio" name="jiaofei" id="jiaofeifail" value="未交">
+                        <label for="jiaofeifail">未交</label>
+                    </div>
+
+                </div>
+                <br>
+                <input type="button" id="sub" value="保存信息" class="btn btn-info" style="margin-left:100px ">
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4"></div>
+    </div>
+</div>
+</body>
+
+
+<script>
+    /*var id = 1*/
+    // 郝彦杰
+    //id = location.href.split("?")[1].split("=")[1]
+    $.get('/student/getUserName', function (r) {
+        $('[name=stuId]').val(r.data.student.stuId)
+        $('[name=stuName]').val(r.data.student.stuName)
+        $('[name=idcard]').val(r.data.student.idcard)
+        $('[name=phoneNum]').val(r.data.student.phoneNum)
+        $('[name=company]').val(r.data.student.company)
+    }, 'json')
+    //袁帅
+    $('#sub').click(function () {
+        $.post('/student/update', $('form').serialize(), function (r) {
+
+            if (r) {
+                alert('修改成功')
+            } else {
+                alert('修改失败')
+            }
+        }, 'json')
+        location.reload()
+    })
+</script>
+</html>

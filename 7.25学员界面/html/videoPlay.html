@@ -1,0 +1,96 @@
+<!--听视频详情-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>播放大厅-太原杰威培训学校</title>
+    <!--webSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/Video-style.css"/>
+
+    <!--webSiteJs-->
+    <link rel="stylesheet" href="../js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="../js/jquery-3.3.1.js"/>
+    <link rel="stylesheet" href="../js/script.js"/>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="logocont">
+    <div class="logocont_zhezhao">
+    </div>
+    <div class="con-tongw">
+        <!--<img src="../img/videoplay/y.jpg" />-->
+        <i class="lf">太原杰威培训学校</i>
+        <i class="rt">杰威教育，提升财会人员专业知识水平</i>
+    </div>
+</div>
+<div class="main pr">
+    <div class="vidcont" style="width: 75%">
+        <div class="vidcont_zhezhao">
+        </div>
+        <div class="maintop pr">
+            <a class="back lf f20" href="javascript:window.history.go(-1);">返回</a>
+            <!--获取课程题目-->
+            <p class="tit lf f20 p1" id="kechengtitle">
+
+            </p>
+        </div>
+        <div class="video">
+            <video
+                    id="my-video"
+                    controls
+                    preload="meta"
+                    height="90%"
+                    width="100%"
+                    autoplay="autoplay"
+                    data-setup="{}"
+                    >
+                <source src="../video/1.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+    </div>
+    <div class="jieshao pa" style="width: 25%;">
+        <div class="jieshao_zhezhao">
+        </div>
+        <div class="maintop line_left">
+            <div class="bshare-custom" style="padding-left: 40px">
+
+                <a title="分享到QQ空间" class="bshare-qzone" onclick='share("qq")'></a>
+                <a title="分享到微信" class="bshare-weixin" href="javascript:void(0);" onclick ='share("微信")'></a>
+                <a title="分享到新浪微博" class="bshare-sinaminiblog" onclick='share("新浪")'></a>
+                <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);" onclick='share("qq好友")'></a>
+            </div>
+            <script type="text/javascript" charset="utf-8"
+                    src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+            <span class="pa closebtn"></span>
+        </div>
+        <div class="jshcont" id="jshcont">
+            <div class="jshtit line_bottom f16 text-c">
+                <span class="cur lf" href="javascript:void(0);">课程目录</span> <span class="lf" href="javascript:void(0);">
+                        课程讲义</span>
+            </div>
+            <div class="mulucont" id="mlcont">
+                <div class="ketong" id="ket1">
+
+                </div>
+            </div>
+            <div class="jiangyicont" id="jycont" style="height: 100%;">
+                <div class="jyketong" id="ket2" style="height: 325px">
+                </div>
+                <div class="jybtn">
+                    <a class="xiazai" target="_blank" href="#"></a>
+                </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

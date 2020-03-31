@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jiewei?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+#    解锁上传文件大小 BY 徐超
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1GB
+      max-request-size: 10GB
+
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+#上传文件地址 BY 徐超
+xc:
+  #upload: /opt/upload/
+ upload: d:/upload/
+
+logging:
+  level:
+    yjs.tyust.edu.cn.jiewei:  trace

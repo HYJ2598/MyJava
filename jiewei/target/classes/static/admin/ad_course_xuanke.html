@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>选课中心</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css?v=4.1.0" rel="stylesheet">
+    <style>
+        li{
+            list-style: none;
+        }
+        button{
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="container">
+        <div class="row">
+            <a href="ad_course_student.html" type="button" class="btn btn-primary"> &nbsp;返回</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-7 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+            <form action="" class="navbar-form" >
+
+                <div class="page-header">
+                    <h3>选课中心</h3>
+                </div>
+
+            </form>
+
+            <!--信息展示开始-->
+            <table class="table table-hover table-striped table-bordered" style="text-align: center;" id="test" lay-filter="test">
+                <!--<thead>-->
+                <!--<tr>-->
+                    <!--<td><h5>课程编号</h5></td>-->
+                    <!--<td><h5>课程名</h5></td>-->
+                    <!--<td><h5>状态</h5></td>-->
+                    <!--<td><h5>通过情况</h5></td>-->
+                <!--</tr>-->
+                <!--</thead>-->
+
+               <!-- <tbody>
+                &lt;!&ndash;一行数据开始&ndash;&gt;
+                <tr>
+                    <td>001</td>
+                    <td>框架基础</td>
+                    <td>
+                        <button class="btn btn-danger">未听</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger">未通过</button>
+                    </td>
+
+                </tr>
+                &lt;!&ndash;一行数据结束&ndash;&gt;
+
+                &lt;!&ndash;一行数据开始&ndash;&gt;
+                <tr>
+                    <td>002</td>
+                    <td>Java基础</td>
+                    <td>
+                        <button class="btn btn-default">正在听</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger">未通过</button>
+                    </td>
+
+                </tr>
+                &lt;!&ndash;一行数据结束&ndash;&gt;
+
+                <tr>
+                    <td>003</td>
+                    <td>jquery基础</td>
+                    <td>
+                        <button class="btn btn-primary">完成</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">通过</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>004</td>
+                    <td>sql基础</td>
+                    <td>
+                        <button class="btn btn-primary">完成</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger">未通过</button>
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+            &lt;!&ndash;信息展示结束&ndash;&gt;
+
+            &lt;!&ndash;分页开始&ndash;&gt;
+            <ul class="pagination pull-right">&lt;!&ndash;pagination 分页 &ndash;&gt;
+                <li><a href="">上一页</a></li>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">下一页</a></li>
+            </ul>
+            &lt;!&ndash;分页结束&ndash;&gt;
+        </div>
+    </div>
+</div>
+--></table>
+        </div></div></div>
+
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+    var  id = location.href.split("?")[1].split("=")[1]
+    layui.use('table', function(){
+        var table = layui.table;
+
+        table.render({
+            elem: '#test'
+            ,url:'/course/selectinfo/'+id
+            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,page:true
+            ,cols: [[
+                {field:'couId', width:220, title: '课程编号', sort: true}
+                ,{field:'couName', width:220, title: '课程名称'}
+                ,{field:'title', title: '状态', width: 220
+                    ,templet: function(d){
+                    console.log(d)
+                        return d['selCou']['stuStatu'];
+                    }
+                }
+                ,{field:'title', title: '通过情况', width: 220
+                    ,templet: function(d){
+                        return d.selCou.situation;
+                    }
+                }
+                // ,{field:'sign', title: '签名', width: '30%', minWidth: 100} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                // ,{field:'experience', title: '积分', sort: true}
+                // ,{field:'score', title: '评分', sort: true}
+                // ,{field:'classify', title: '职业'}
+                // ,{field:'wealth', width:137, title: '财富', sort: true}
+            ]]
+        });
+
+        // table.render({
+        //     elem: '#test'
+        //     ,url:'/course/selectinfo'
+        //     ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+        //     ,page:true
+        //     ,cols: [[
+        //         {field:'stuStatu', width:220, title: '课程编号', sort: true}
+        //         ,{field:'situation', width:220, title: '课程名称'}
+        //         //,{field:'stuStatu', width:220, title: '状态', sort: true}
+        //         //,{field:'situation', width:220, title: '通过情况'}
+        //         // ,{field:'sign', title: '签名', width: '30%', minWidth: 100} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+        //         // ,{field:'experience', title: '积分', sort: true}
+        //         // ,{field:'score', title: '评分', sort: true}
+        //         // ,{field:'classify', title: '职业'}
+        //         // ,{field:'wealth', width:137, title: '财富', sort: true}
+        //     ]]
+        // });
+    });
+
+</script>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/script.js"></script>
+
+    <style>
+        .navbar{
+            background-color: #337AB7;
+        }
+        .navbar h1{
+            color:white;
+        }
+        .navbar h2{
+            color:white;
+        }
+
+
+        h1{
+            font-family: kaiti;
+
+        }
+        .main{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-default">
+    <div class="container">
+        <!--导航栏标题-->
+        <div class="navbar-header">
+            <h1>随堂练习</h1>
+            <h2>山西省会计人员继续教育</h2>
+        </div>
+    </div>
+</div>
+<!--主页 按钮-->
+
+
+<!--2  8   2-->
+<div class="container">
+    <div class="row">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <p class="panel-title">
+                </p>
+            </div>
+            <div class="panel-body" align="center">
+
+
+                <form  action="" method="post">
+                    <table id="tb" class="main" border="1">
+
+                    </table>
+                </form>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+<script>
+    /*获取到所属课程的试题*/
+    id = location.href.split("?")[1].split("=")[1];
+    alert(id);
+    $.get('/test/testListById/'+id,function (r) {
+        for (i=0;i<r.length;i++) {
+            /*题型的判断*/
+
+            if (r[i]['answer'].split("；").length ==1) {
+                /*单选题和判断题的判别*/
+
+                /*判别是否判断题*/
+                if (r[i]['optiongroup'].split("；").length == 2) {
+
+
+                    str = ` <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[判断题]${r[i]['ques']}</td>
+                                 </tr>
+                                 `
+
+                    $('table').append(str);
+
+                    for (c=0;c<r[i]['optiongroup'].split("；").length;c++) {
+
+                        value_op2=r[i]['optiongroup'].split("；")[c].split(".")[0]
+
+                        str0=`
+                                 <tr height="30px">
+                                        <td width="9%" class="text-center">
+                                            <input type="radio" name="${r[i]['testId']}" value="${value_op2}"/>
+                                        </td>
+                                        <td>${r[i]['optiongroup'].split("；")[c]}</td>
+                                  </tr>
+
+                                `
+
+                        $('table').append(str0);
+                    }
+                } else {
+
+                    /*剩下的就是单选题了*/
+
+                    str1 = `
+                            <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[单选题]${r[i]['ques']}</td>
+                            </tr>
+                            `
+
+                    $('table').append(str1);
+
+                    for (a = 0;a <r[i]['optiongroup'].split("；").length;a++) {
+
+                        value_op1=r[i]['optiongroup'].split("；")[a].split(".")[0]
+
+                        str2 = `
+                                <tr height="30px">
+                                    <td width="9%" class="text-center">
+                                        <input type="radio" name="${r[i]['testId']}" value="${value_op1}"/>
+                                    </td>
+                                    <td>${r[i]['optiongroup'].split("；")[a]}</td>
+                                </tr>
+                                 `
+
+                        $('table').append(str2);
+                    }
+                }
+            } else {
+
+                /*多选题*/
+
+                str3 = `
+                            <tr height="30px">
+                                    <td colspan="2">${r[i]['sort']}.[多选题]${r[i]['ques']}</td>
+                            </tr>
+                            `
+
+                $('table').append(str3);
+
+                for (b= 0;b < r[i]['optiongroup'].split("；").length;b++) {
+
+                    value_op=r[i]['optiongroup'].split("；")[b].split(".")[0];
+
+                    str4 = `
+                                <tr height="30px">
+                                    <td width="9%" class="text-center">
+                                        <input type="checkbox" name="${r[i]['testId']}" value="${value_op}"/>
+                                    </td>
+                                    <td>${r[i]['optiongroup'].split("；")[b]}</td>
+                                </tr>
+                                 `
+
+                    $('table').append(str4);
+                }
+            }
+        }
+    },'json')
+
+    /*将学员的答案传到后台进行答案比较*/
+
+    function tijiao(){
+        $.ajax({
+            type:"post",
+            url:'/test/compareAnswer',
+            data:{"frm":$('form').serialize(),"id":id},
+            success:function(msg){
+                if (msg==true){
+                    alert("恭喜你考试成功");
+
+                    window.location.href = "exam_submit.html?id="+id+'&name='+0;
+                } else {
+                    alert("很遗憾考试失败");
+
+                    window.location.href = "exam_submit.html?id="+id+'&name='+1;
+                }
+            }
+        });
+    }
+
+    /*根据id查出来的试题总数显示到页面上*/
+
+    $.get('/test/testCountSelectById/'+id,function (r) {
+        $('.panel-title').append("(本类题共"+r+"小题。总分100分。多选、错选、不选均不得分)")
+    }, 'json')
+</script>
+</html>

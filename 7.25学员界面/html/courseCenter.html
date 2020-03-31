@@ -1,0 +1,325 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+ <meta charset="utf-8">
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <title>个人中心-选课</title>
+    <meta name="keywords" content="山西省会计人员继续教育网">
+    <meta name="description" content="山西省会计人员继续教育网">
+    <!--WebSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="/css/public.css?fr=201901220012" />
+    <link rel="stylesheet" href="../font/iconfont.css" />
+    <!--WebSiteJs-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.js"></script>
+    <script src="../js/script.js" type="text/javascript"></script>
+</head>
+<body>
+<style type="text/css">
+    .sel_btn
+    {
+        font-size: 14px;
+        border: 1px solid #3179c3;
+        color: #666666;
+        padding: 4px 12px;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    .sel_btn:hover
+    {
+        font-size: 14px;
+        background: #3179c3;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    .checkyear
+    {
+        background: #3179c3;
+        color: #fff;
+    }
+    .sel_btn1, .sel_btn1:hover
+    {
+        font-size: 14px;
+        background: #f27048;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    .pages a
+    {
+        cursor: pointer;
+    }
+</style>
+
+<div class="header">
+    <div class="container" style="padding-left: 0px; padding-right: 0px;">
+        <div class="header_top">
+            <div class="pull-left header_top_left">
+                欢迎您来到山西省会计网!</div>
+            <div class="pull-right header_top_right">
+                <span id="ctl09_loginstate" class="header_top_login" style="font-size:14px;">欢迎您：秦艳 </span><a href="/Course/MyCourse.aspx" class="header_top_login" style=" margin-left:20px;">个人中心</a>|<a href="/loginout.aspx" class="header_top_login" style="margin-left:20px;">退出</a><a href="" class="header_top_phone"><i class="icon iconfont icon-dianhua"></i>客服电话:0351-7210826</a>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="pull-left logo">
+               <h1><img src="../images/logo.png" alt="" /></h1>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav_bar">
+                <div id='cssmenu' class="pull-right">
+
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="main">
+            <div class="box content">
+                <div class="content-lf">
+                    <ul>
+                        <li><a href="myCourse.html" class="content-lf-icon1">我的课程</a></li>
+                        <li><a href="courseCenter.html" class="content-lf-icon2">选课中心</a></li>
+                        <li><a href="myExam.html" class="content-lf-icon3">考试中心</a></li>
+                        <li><a href="studyReport.html" class="content-lf-icon4">学分报告</a></li>
+                        <li><a href="myMessage.html" class="content-lf-icon5">我的问题</a></li>
+                        <li><a href="#" class="content-lf-icon7">我的订单</a></li>
+                        <li><a href="myAnswer.html" class="content-lf-icon6">提交工单</a></li>
+                        <li><a href="perInfo.html" class="content-lf-icon8">基本信息</a></li>
+                    </ul>
+                </div>
+
+        <div class="content-rg">
+            <div class="xxbg">
+                <div class="xxbg-top">
+                    <span class="span1">选课中心 </span><body class="span2"><span class="span1">
+
+                    <a id="year_2018" href="ChoiceCourse.aspx?Year=2018" class="sel_btn"
+                       style="">
+                        2018</a>
+
+                    <a href="/Order/CourseBuy.aspx?strUrl=/Course/ChoiceCourse.aspx" class="sel_btn1">选择其他年度课程</a>
+                </span>
+                <div>
+                    <div class="xxbg-center">
+                        <ul class="list1">
+                            <li><span id="s_coursenum">
+                        51</span>
+                                <p>
+                                    已选课程</p>
+                            </li>
+                            <li><span id="s_totalhours">
+                        90</span>
+                                <p>
+                                    已选学分</p>
+                            </li>
+                            <li><span>
+                        90</span>
+                                <p>
+                                    完成学时</p>
+                            </li>
+                            <li class="li2"><span>
+                        合格</span>
+                                <p>
+                                    培训状态</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="xxbg-bt"  style="line-height:40px;">
+                        山西省继续教育规定2018年度，课程为90学分，请选择课程后，进入学习<a href="/Course/MyCourse.aspx">学习中心</a>
+                        <br />
+                        学习完成之后，系统会在1-3个工作日将您的学习记录提交到<span><a href="http://www.kjzx.cn/Exam/UserAdmin/MarkCertSearchList.aspx" target="_blank">会计之星</a></span>请耐心等待！
+                    </div>
+                </div>
+            <div class="xxbg">
+
+
+
+                <div class="sideMenu">
+                    <div class="zjxx qbkc-kcfl">
+                        <div class="list2">
+                            <table id="show_tab">
+                                <tbody>
+                                <tr>
+                                    <td class="td1">
+                                        <img src="http://file.sxacc.cn/upload/kecheng/152.png" alt="" style=" width:185px; height:108px;">
+                                    </td>
+                                    <td class="td2">
+                                        <h5>
+                                            <a href="/Course/VideoPaly.aspx?id=152">
+                                                环境保护税法</a></h5>
+                                        <div class="xuetime">
+                                            <span>&nbsp;&nbsp;&nbsp;讲师：孙妍玲</span></div>
+                                    </td>
+                                    <td style="width:80px">
+                                        <!--<div class="xuefen">
+                                            <span class="span1">学时</span> <span class="span2">
+                                                4.24h</span>
+                                        </div>-->
+                                    </td>
+                                    <td>
+                                        <div class="xuefen">
+                                            <span class="span1">学分</span> <span class="span3">
+                                                4.24</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="mfst"><a href="/Course/VideoPaly.aspx?id=152">
+                                            <img src="../img/icon_11.png" style="width: 12px; height: 12px;" alt="">&nbsp;&nbsp;免费试听</span></a>
+                                        <p id="p_152">
+                                            <button class="btn-choice-oning" onclick="SelectCourse(152,2018,'DELETE')"  ><span class="btn-choice-icon">删除选课</span></button></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">
+                                        <img src="http://file.sxacc.cn/upload/kecheng/194.png" alt="" style=" width:185px; height:108px;">
+                                    </td>
+                                    <td class="td2">
+                                        <h5>
+                                            <a href="/Course/VideoPaly.aspx?id=194">
+                                                工资薪金个人所得税政策</a></h5>
+                                        <div class="xuetime">
+                                            <span>
+                                                <img src="/UploadFile/teacher/201808110301543458.jpg" style="width: 23px; height: 23px;"
+                                                     alt="">&nbsp;&nbsp;&nbsp;讲师：郭海</span></div>
+                                    </td>
+                                    <td style="width:80px">
+                                        <!--<div class="xuefen">
+                                            <span class="span1">学时</span> <span class="span2">
+                                                3.94h</span>
+                                        </div>-->
+                                    </td>
+                                    <td>
+                                        <div class="xuefen">
+                                            <span class="span1">学分</span> <span class="span3">
+                                                3.94</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="mfst"><a href="/Course/VideoPaly.aspx?id=194">
+                                            <img src="../img/icon_11.png" style="width: 12px; height: 12px;" alt="">&nbsp;&nbsp;免费试听</span></a>
+                                        <p id="p_194">
+                                            <button class="btn-choice-oning" onclick="SelectCourse(194,2018,'DELETE')"><span class="btn-choice-icon">删除选课</span></button></p>
+
+
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="td1">
+                                        <img src="http://file.sxacc.cn/upload/kecheng/196.png" alt="" style=" width:185px; height:108px;">
+                                    </td>
+                                    <td class="td2">
+                                        <h5>
+                                            <a href="/Course/VideoPaly.aspx?id=196">
+                                                研发费用加计扣除优惠政策解析</a></h5>
+                                        <div class="xuetime">
+                                            <span>&nbsp;&nbsp;&nbsp;讲师：王爱红</span></div>
+                                    </td>
+                                    <td style="width:80px">
+                                        <!--<div class="xuefen">
+                                            <span class="span1">学时</span> <span class="span2">
+                                                4.35h</span>
+                                        </div>-->
+                                    </td>
+                                    <td>
+                                        <div class="xuefen">
+                                            <span class="span1">学分</span> <span class="span3">
+                                                4.35</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="mfst"><a href="/Course/VideoPaly.aspx?id=196">
+                                            <img src="../img/icon_11.png" style="width: 12px; height: 12px;" alt="">&nbsp;&nbsp;免费试听</span></a>
+                                        <p id="p_196">
+                                            <button class="btn-choice-oning" onclick="SelectCourse(196,2018,'DELETE')"  ><span class="btn-choice-icon">删除选课</span></button></p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="pages">
+                                <span ><a href="lastpage">上一页</a></span>
+                                <span><a href="javascript:PageJump('1')" id="page1" class="current">1</a></span>
+                                <span><a href="javascript:PageJump('1')" id="page2" class="current">2</a></span>
+                                <span><a href="javascript:PageJump('1')" id="page3" class="current">3</a></span>
+                                <span class="next"><a href="#">下一页</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--已学习课程无法取消弹窗-->
+                <div id="dialog-no" class="animated">
+                    <div class="he">
+                        温馨提示
+                    </div>
+                    <h1>
+                        课程已经学习，禁止取消!</h1>
+                    <h3>
+                        <a href="javascript:;" class="sure1">确定</a></h3>
+                </div>
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $(".sideMenu h3 em").click(function () {
+                            $(this).parent(".sideMenu h3").next(".qbkc-kcfl").slideToggle();
+                            $(this).parent(".sideMenu h3").toggleClass("on")
+                        });
+                    });
+
+                        $('.sure').click(function () {
+                            $('#dialogBg').fadeOut(300, function () {
+                                $('#dialog').addClass('bounceOutUp').fadeOut();
+                            });
+                        });
+                        //已学习课程无法取消
+                                  $('.btn-choice-oning').click(function () {
+                                      className = $(this).attr('class');
+                                       $('#dialogBg').fadeIn(300);
+                                      $('#dialog-no').removeAttr('class').addClass('animated ' + className + '').fadeIn();
+                                    });
+                        //关闭已学习课程无法取消弹窗
+                        $('.sure1').click(function () {
+                            $('#dialogBg').fadeOut(300, function () {
+                                $('#dialog-no').addClass('bounceOutUp').fadeOut();
+                            });
+                        });
+                        //关闭已学习课程无法取消弹窗
+                        $('.sure1').click(function () {
+                            $('#dialogBg').fadeOut(300, function () {
+                                $('#dialog-del').addClass('bounceOutUp').fadeOut();
+                            });
+                        });
+
+
+
+
+
+
+
+                </script>
+    </body>
+</html>
+
+

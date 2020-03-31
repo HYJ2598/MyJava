@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/dataTables.bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <!-- <link rel="stylesheet" href="../css/zhuye.css">-->
+    <style>
+        .bg {
+            border: 1px solid white;
+            background-color: black;
+            color: white;
+        }
+
+        .btn {
+            width: 100px;
+            height: 30px;
+        }
+
+        .lesson_list_right_form {
+            width: 100px;
+            height: 200px;
+
+        }
+
+        .zhezhao {
+            width: 262px;
+            height: 153px;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            left: 13px;
+            top: 5px;
+            padding-top: 50px;
+            padding-left: 100px;
+            display: none;
+        }
+
+        .fc1:hover > .zhezhao {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<!--导航部分-->
+<div class="navbar navbar-default top">
+    <div class="container">
+        <div class="row">
+            <!--导航栏标题-->
+            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 navbar-header">
+                <div class="col-lg-1 col-xs-1 col-sm-1 col-md-1">
+                    <!--<img src="../images/a.png" alt=""/>-->
+                </div>
+                <div class="col-lg-4 col-xs-4 col-sm-4 col-md-4 ">
+                    <h2><img src="../img/jieweitubiao.png" style="margin-left: -120px;height:90px;margin-top: -15px"> </h2>
+                </div>
+                <!--学员登录注册-->
+                <div class="col-lg-7 col-xs-7 col-sm-7 col-md-7" style="margin-top: 10px">
+                    <input type="button" name="userLogin" value="学员登录" class="btn btn-primary"
+                           onclick="location.href='login.html'" style="margin-top: 25px;margin-left: 80px"/>
+                    <input type="button" name="userReg" value="学员注册" class="btn btn-primary"
+                           onclick="location.href='reg.html'" style="margin-top: 25px;margin-left: 50px"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航部分-->
+<!--轮播部分-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="signinpanel">
+                <div class="row">
+                    <div class="col-sm-7">
+
+                    </div>
+                    <div class="col-sm-5">
+                        <!--               <form>
+                                           <h2 style="margin:0">学员登录</h2>
+                                           <input type="text" class="form-control" placeholder="您的身份证号码" style="width: 200px;height: 36px;" />
+                                           <div class="yanzhengBox">
+                                               <div style="margin-right: px">
+                                                   <table>
+                                                       <tr>
+                                                           <td> <input type="text" class="form-control" id="code_input" value="" placeholder="验证码" ></td>
+                                                           <td><div id="v_container" style="width: 100px;height: 36px"></div></td>
+                                                       </tr>
+                                                   </table>
+
+
+                                               </div>
+
+                                           </div>
+                                           <input id="loginBtn" class="btn btn-default" type="button" value="立即登录"/>
+                                           <input type="button"  class="btn btn-default" value="退出登录" onclick="javascript:jump()"/>
+                                           <script src="../js/gVerify.js"></script>
+                                           <script>
+                                               function jump(){
+                                                   window.location.href="zhuye.html"
+                                               }
+                                           </script>
+                                           <script>
+                                               var verifyCode = new GVerify("v_container");
+                                               // console.log(verifyCode)
+                                               document.getElementById("loginBtn").onclick = function(){
+                                                   var res = verifyCode.validate(document.getElementById("code_input").value);
+                                                   if(res){
+               //            alert("验证正确");
+                                                       window.location.href="index2.html"
+
+                                                   }else{
+                                                       alert("验证码错误");
+                                                   }
+                                               }
+                                           </script>
+
+                                       </form>-->
+                    </div>
+                </div>
+            </div>
+            <div id="myCarousel" data-ride="carousel" class="carousel">
+                <!--轮播指标-->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="../images/img01.jpg" alt="First slide">
+                        <!--<div style="margin: 0px; width: 300px;height: 400px">
+                        <form>
+                            <h1 style="margin:0">学员登录</h1>
+                            <input type="text" placeholder="您的身份证号码" />
+                            <div class="yanzhengBox">
+                                <div style="margin-right: 10px">
+                                    <input type="text" id="code_input" value="" placeholder="验证码" style="width: 100%">
+                                </div>
+                                <div id="v_container" style="width: 100px;height: 36px"></div>
+                            </div>
+                            <input id="loginBtn" type="button" value="立即登录"/>
+                            <input type="button" value="退出登录" onclick="javascript:jump()"/>
+
+                        </form>
+                        </div>-->
+                    </div>
+
+                    <div class="item">
+                        <img src="../images/img02.jpg" alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="../images/img03.jpg" alt="Third slide">
+                    </div>
+                    <div class="item">
+                        <img src="../images/img04.jpg" alt="Fourth slide">
+                    </div>
+                    <!-- 轮播（Carousel）导航 -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--轮播结束-->
+
+
+<div class="main">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container" style="margin-top: 10px">
+                <img src="../images/1.png" alt=""/>
+            </div>
+
+            <div class="content">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:20px ">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr id="year">
+                                <th>年份</th>
+                                <td><a href="" id="quanbu" class="" onclick="check()">全部</a></td>
+                                <!--<td><a href="" id="y2019" class="">2019</a></td>
+                                <td><a href="" id="y2018" class="">2018</a></td>
+                                <td><a href="" id="y2017" class="">2017</a></td>
+                                <td><a href="" id="y2016" class="">2016</a></td>
+                                <td><a href="" id="y2015" class="">2015</a></td>
+                                <td><a href="" id="y2014" class="">2014</a></td>
+                                <td><a href="" id="y2013" class="">2013</a></td>
+                                <td><a href="" id="y2012" class="">2012</a></td>
+                                <td><a href="" id="y2011" class="">2011</a></td>
+                                <td><a href="" id="y2010" class="">2010</a></td>-->
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr id="kind">
+                                <th>学习类别</th>
+                                <td><a href="" id="qb">全部</a></td>
+                                <!--<td><a href="" id="kj">会计类</a></td>
+                                <td><a href="" id="sw">税务类</a></td>
+                                <td><a href="" id="cg">财管类</a></td>
+                                <td><a hre="" id="fg">法规类</a></td>
+                                <td><a href="" id="jr">金融类</a></td>
+                                <td><a href="" id="nk">内控类</a></td>
+                                <td><a href="" id="tz">拓展类</a></td>
+                                <td><a href="" id="sj">审计类</a></td>
+                                <td><a href="" id="sv">SVIP</a></td>-->
+                            </tr>
+                            <tr id="kind2">
+                                <th>课程类型</th>
+                                <td><a href="" id="qb1">全部</a></td>
+                                <!--<td><a href="" id="kj">会计类</a></td>
+                                <td><a href="" id="sw">税务类</a></td>
+                                <td><a href="" id="cg">财管类</a></td>
+                                <td><a hre="" id="fg">法规类</a></td>
+                                <td><a href="" id="jr">金融类</a></td>
+                                <td><a href="" id="nk">内控类</a></td>
+                                <td><a href="" id="tz">拓展类</a></td>
+                                <td><a href="" id="sj">审计类</a></td>
+                                <td><a href="" id="sv">SVIP</a></td>-->
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="main">
+                        <div class="row">
+                            <div class="container " id="content">
+
+                                <!--<div class="col-lg-3" id="content">-->
+                                    <!--<li style="list-style-type: none">-->
+                                        <!--<div class="fc1">-->
+                                            <!--<div href="" class="jywl-cp" style="margin-top: 5px">-->
+                                                <!--<img src="../images/2.png" id="tu"></div>-->
+                                            <!--<div href="" class="jywl-list-text">-->
+                                                <!--<h4>-->
+                                                    <!--<a href="">村集体经济组织会计制度讲解</a></h4>-->
+                                                <!--<p>-->
+                                                    <!--<img src="" alt="">讲师：张利云</p>-->
+                                                <!--<div class="jg">-->
+                                                    <!--<span class="span1">-->
+                                                        <!--2012</span>&nbsp;<span class="span2">会计类</span>&nbsp;&nbsp;<span-->
+                                                        <!--class="span3">-->
+                                                                <!--学分：1.83分</span></div>-->
+                                            <!--</div>-->
+
+                                            <!--<div class="zhezhao">-->
+                                                <!--<h3>详情</h3>-->
+                                            <!--</div>-->
+
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <center>
+                        <table class="table table-hover table-striped">
+                            <tr>
+                                <td>
+                                    <center><h3>
+                                        <img src="" class="glyphicon glyphicon-heart" alt=""/>
+                                        <a href="help_center.html">培训须知</a></h3></center>
+                                </td>
+                                <td>
+                                    <h3>
+                                        <center>
+                                            <img src="" class="glyphicon glyphicon-apple" alt=""/>
+                                            <a href="help_center.html">培训流程</a>
+                                    </h3>
+                    </center>
+                    </td>
+                    <td>
+                        <h3>
+                            <center>
+                                <img src="" class="glyphicon glyphicon-bell" alt=""/>
+                                <a href="help_center.html">操作演示</a>
+                        </h3>
+                        </center>
+                    </td>
+                    <td>
+                        <h3>
+                            <center>
+                                <img src="" class="glyphicon glyphicon-ban-circle" alt=""/>
+                                <a href="question.html">常见问题</a>
+                        </h3>
+                        </center>
+                    </td>
+                    </tr>
+                    </table>
+                    </center>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="col-lg-4">
+
+                <img src="../images/logo.jpg" alt=""/>
+                <span style="margin-left: 50px;margin-top: 0px">山西省会计人员继续教育网络培训平台</span>
+
+            </div>
+
+
+            <div class="col-lg-4 container">
+
+                <table cellspacing="center" style="margin-top: 18px;margin-left: 100px">
+                    <tr align="center">
+                        <td><p>网站首页</p></td>
+                        <td>培训通知</td>
+                    </tr>
+                    <tr>
+                        <td><p>培训课程</p></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><p>政策法规</p></td>
+                        <td>名师风采</td>
+                    </tr>
+                    <tr>
+                        <td><p>关于我们</p></td>
+
+                    </tr>
+                    <tr>
+                        <td><p>联系我们</p></td>
+                        <td>帮助中心</td>
+                    </tr>
+                    <tr>
+                        <td><p>在线购课</p></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-lg-4">
+                <table class="" style="margin-top: 18px;margin-left: 70px; ">
+                    <tr>
+                        <td>服务热线</td>
+                    </tr>
+                    <tr>
+                        <td>0351-123456789</td>
+
+                    </tr>
+                    <tr>
+                        <td>服务时间：9：00—12:00 14:00—18:00</td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div class="container pull-right">
+            <!--
+                    <input type="button" name="userReg" value="学员注册" class="btn" onclick="location.href='reg.html'"/>
+            -->
+            <input type="button" name="adminLogin" value="管理员登录" class="btn btn-primary pull-right"
+                   onclick="location.href='../admin/login_1.html'"/>
+        </div>
+
+
+    </div>
+
+
+</body>
+<script>
+    var Lang = {
+        "sProcessing": "数据正在加载中...",
+        "sLengthMenu": "每页 _MENU_ 项",
+        "sZeroRecords": "没有匹配结果",
+        "sInfo": "当前显示第 _START_ 至 _END_ 项，共 _TOTAL_ 项。",
+        "sInfoEmpty": "当前显示第 0 至 0 项，共 0 项",
+        "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+        "sInfoPostFix": "",
+        "sSearch": "搜索:",
+        "sUrl": "",
+        "sEmptyTable": "暂无数据",
+        "sLoadingRecords": "载入中...",
+        "sInfoThousands": ",",
+        "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页",
+            "sJump": "跳转"
+        }
+    };
+    var URL = "/test/test.json";
+    //     $("#example").dataTable({
+    //         language: Lang, //提示信息
+    //         stripeClasses: ["odd", "even"], //为奇偶行加上样式，兼容不支持CSS伪类的场合
+    //         renderer: "bootstrap", //渲染样式：Bootstrap和jquery-ui
+    //         pagingType: "simple_numbers", //分页样式：simple,simple_numbers,full,full_numbers
+    //         ajax: function (data, callback, settings) {
+    //             //ajax请求数据
+    //             $.ajax({
+    //                 type: "get",
+    //                 url: URL,
+    //                 cache: false, //禁用缓存
+    //                 dataType: "json",
+    //                 success: function (result) {
+    // //					console.log(param);
+    //                     //封装返回数据
+    //                     var returnData = {
+    //                         data: [],
+    //                         recordsTotal: 0,
+    //                         recordsFiltered: 0
+    //                     };
+    //                     if (result.success) {
+    //                         returnData.draw = data.draw; //这里直接自行返回了draw计数器,应该由后台返回
+    //                         returnData.recordsTotal = result.totalCount; //返回数据全部记录
+    //                         returnData.recordsFiltered = result.totalCount; //后台不实现过滤功能，每次查询均视作全部结果
+    //                         returnData.data = result.res; //返回的数据列表
+    //                         //调用DataTables提供的callback方法，代表数据已封装完成并传回DataTables进行渲染
+    //                         //此时的数据需确保正确无误，异常判断应在执行此回调前自行处理完毕
+    //                     }
+    //                     callback(returnData);
+    //                 }
+    //             });
+    //         },
+    //         function check(){//这是按钮的点击事件
+    //         var img = document.getElementById('');//获取img对象
+    //         img.src = "images/2.png";//把要显示的图片地址赋给img对象src就行了
+    //     }
+
+</script>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    var kecheng = '';
+    $.get("/course/list", function (r) {
+        console.log(r)
+
+       for (var i in r){
+
+
+        kecheng += '<div class="col-lg-3" id="content">'+
+            '<li style="list-style-type: none">\n' +
+            '                                        <div class="fc1">\n' +
+            '                                            <div href="" class="jywl-cp" style="margin-top: 5px">\n' +
+            '                                                <img src=/upload/'+r[i].src+' id="tu" style="width: 262px;height:153px "></div>\n' +
+            '                                            <div href="" class="jywl-list-text">\n' +
+            '                                                <h4>\n' +
+            '                                                    <a href="" >'+r[i].couName+'</a></h4>\n' +
+            '                                                <p>\n' +
+            '                                                    <img src="" alt="">讲师：'+r[i].teacher+'</p>\n' +
+            '                                                <div class="jg">\n' +
+            '                                                    <span class="span1">\n' +
+            '                                                        '+r[i].year+'</span>&nbsp;<span class="span2">'+r[i].kind+'</span>&nbsp;&nbsp;<span\n' +
+            '                                                        class="span3">\n' +
+            '                                                                学分：'+r[i].credit+'分</span></div>\n' +
+            '                                            </div>\n' +
+            '\n' +
+            '                                            <div class="zhezhao">\n' +
+            '                                                <h3>详情</h3>\n' +
+            '                                            </div>\n' +
+            '\n' +
+            '                                        </div>\n' +
+            '                                    </li>'+
+                '</div>';
+       }
+        $('#content').append(kecheng);
+
+    }, 'json');
+
+    $.get("/course/selectyear",function (r) {
+        console.log(r)
+        year=''
+        for (var i in r){
+            year+='<td><a href="javascript:;" onclick="selectbyyear('+r[i]+')" id="y2019" class="">'+r[i]+'</a></td>'
+        }
+        $("#year").append(year);
+    },'json')
+
+    $.get("/course/selectkind",function (r) {
+        console.log(r)
+        kind=''
+        for (var i in r){
+            kind+='<td><a href="javascript:;" onclick="selectbykind(&quot'+r[i]+'&quot)" id="kj">'+r[i]+'</a></td>'
+        }
+        $("#kind").append(kind);
+    },'json')
+
+    $.get("/course/selectkind2",function (r) {
+        console.log(r);
+        kind2=''
+        for (var i in r){
+            kind2+='<td><a href="javascript:;" onclick="selectbykind2(&quot'+r[i]+'&quot)" id="kj2">'+r[i]+'</a></td>'
+        }
+        $("#kind2").append(kind2);
+    },'json')
+
+    function selectbyyear(year) {
+        var kecheng=''
+        $.get("/course/selectbyyear/"+year,function (r) {
+            $("#content").html('')
+            console.log(r)
+            for (var i in r){
+                kecheng += '<div class="col-lg-3" id="contents">'+
+                    '<li style="list-style-type: none">\n' +
+                    '                                        <div class="fc1">\n' +
+                    '                                            <div href="" class="jywl-cp" style="margin-top: 5px">\n' +
+                    '                                                <img src=/upload/'+r[i].src+' id="tu" style="width: 262px;height:153px "></div>\n' +
+                    '                                            <div href="" class="jywl-list-text">\n' +
+                    '                                                <h4>\n' +
+                    '                                                    <a href="" >'+r[i].couName+'</a></h4>\n' +
+                    '                                                <p>\n' +
+                    '                                                    <img src="" alt="">讲师：'+r[i].teacher+'</p>\n' +
+                    '                                                <div class="jg">\n' +
+                    '                                                    <span class="span1">\n' +
+                    '                                                        '+r[i].year+'</span>&nbsp;<span class="span2">'+r[i].kind+'</span>&nbsp;&nbsp;<span\n' +
+                    '                                                        class="span3">\n' +
+                    '                                                                学分：'+r[i].credit+'分</span></div>\n' +
+                    '                                            </div>\n' +
+                    '\n' +
+                    '                                            <div class="zhezhao">\n' +
+                    '                                                <h3>详情</h3>\n' +
+                    '                                            </div>\n' +
+                    '\n' +
+                    '                                        </div>\n' +
+                    '                                    </li>'+
+                    '</div>';
+            }
+$("#content").append(kecheng);
+        },'json')
+    }
+
+    function selectbykind(kind) {
+        var kecheng = ''
+        $.get("/course/selectbykind/" + kind, function (r) {
+            $("#content").html('')
+            console.log(r)
+            for (var i in r) {
+                kecheng += '<div class="col-lg-3" id="contents">' +
+                    '<li style="list-style-type: none">\n' +
+                    '                                        <div class="fc1">\n' +
+                    '                                            <div href="" class="jywl-cp" style="margin-top: 5px">\n' +
+                    '                                                <img src=/upload/' + r[i].src + ' id="tu" style="width: 262px;height:153px "></div>\n' +
+                    '                                            <div href="" class="jywl-list-text">\n' +
+                    '                                                <h4>\n' +
+                    '                                                    <a href="" >' + r[i].couName + '</a></h4>\n' +
+                    '                                                <p>\n' +
+                    '                                                    <img src="" alt="">讲师：' + r[i].teacher + '</p>\n' +
+                    '                                                <div class="jg">\n' +
+                    '                                                    <span class="span1">\n' +
+                    '                                                        ' + r[i].year + '</span>&nbsp;<span class="span2">' + r[i].kind + '</span>&nbsp;&nbsp;<span\n' +
+                    '                                                        class="span3">\n' +
+                    '                                                                学分：' + r[i].credit + '分</span></div>\n' +
+                    '                                            </div>\n' +
+                    '\n' +
+                    '                                            <div class="zhezhao">\n' +
+                    '                                                <h3>详情</h3>\n' +
+                    '                                            </div>\n' +
+                    '\n' +
+                    '                                        </div>\n' +
+                    '                                    </li>' +
+                    '</div>';
+            }
+            $("#content").append(kecheng);
+        }, 'json')
+    }
+
+        function selectbykind2(kind) {
+            var kecheng = ''
+            $.get("/course/selectbykind2/" + kind, function (r) {
+                $("#content").html('')
+                console.log(r)
+                for (var i in r) {
+                    kecheng += '<div class="col-lg-3" id="contents">' +
+                        '<li style="list-style-type: none">\n' +
+                        '                                        <div class="fc1">\n' +
+                        '                                            <div href="" class="jywl-cp" style="margin-top: 5px">\n' +
+                        '                                                <img src=/upload/' + r[i].src + ' id="tu" style="width: 262px;height:153px "></div>\n' +
+                        '                                            <div href="" class="jywl-list-text">\n' +
+                        '                                                <h4>\n' +
+                        '                                                    <a href="" >' + r[i].couName + '</a></h4>\n' +
+                        '                                                <p>\n' +
+                        '                                                    <img src="" alt="">讲师：' + r[i].teacher + '</p>\n' +
+                        '                                                <div class="jg">\n' +
+                        '                                                    <span class="span1">\n' +
+                        '                                                        ' + r[i].year + '</span>&nbsp;<span class="span2">' + r[i].kind + '</span>&nbsp;&nbsp;<span\n' +
+                        '                                                        class="span3">\n' +
+                        '                                                                学分：' + r[i].credit + '分</span></div>\n' +
+                        '                                            </div>\n' +
+                        '\n' +
+                        '                                            <div class="zhezhao">\n' +
+                        '                                                <h3>详情</h3>\n' +
+                        '                                            </div>\n' +
+                        '\n' +
+                        '                                        </div>\n' +
+                        '                                    </li>' +
+                        '</div>';
+                }
+                $("#content").append(kecheng);
+            }, 'json')
+
+    }
+</script>
+</html>

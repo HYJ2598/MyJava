@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--使用webkit内核-->
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>个人中心-基本信息</title>
+    <!--webSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/personnonif.css"/>
+
+    <!--webSiteJs-->
+    <link rel="stylesheet" href="../js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="../js/jquery-3.3.1.js"/>
+    <link rel="stylesheet" href="../js/script.js"/>
+    <link rel="stylesheet" href="../js/jquery.SuperSlide.2.1.js"/>
+    <!--浮动广告的样式-->
+    <style>
+        #floatDivBoxs ul, ol
+        {
+            list-style: none;
+        }
+        #floatDivBoxs img
+        {
+            border: none;
+            outline: none;
+        }
+        #floatDivBoxs a
+        {
+            color: #666;
+            text-decoration: none;
+            outline: none;
+        }
+        #floatDivBoxs a:hover
+        {
+            color: #e8431f;
+        }
+
+        /*浮动客服*/
+        #floatDivBoxs
+        {
+            width: 150px;
+            background: #fff;
+            position: fixed;
+            top: 100px;
+            right: 0;
+            z-index: 999;
+        }
+        #floatDivBoxs .floatDtt
+        {
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            background: #f08326;
+            color: #fff;
+            font-size: 18px;
+            text-indent: 22px;
+            position: relative;
+        }
+        #floatDivBoxs .floatDqq
+        {
+            padding: 0 14px;
+        }
+        #floatDivBoxs .floatDqq li
+        {
+            height: 45px;
+            line-height: 45px;
+            font-size: 15px;
+            border-bottom: 1px solid #e3e3e3;
+            padding: 0 0 0 50px;
+        }
+        #floatDivBoxs .floatDtxt
+        {
+            font-size: 18px;
+            color: #333;
+            padding: 12px 14px;
+        }
+        #floatDivBoxs .floatDtel
+        {
+            padding: 0 0 15px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f08326;
+        }
+        #floatDivBoxs .floatDtel img
+        {
+            display: block;
+        }
+        #floatDivBoxs .floatDbg
+        {
+            width: 100%;
+            height: 20px;
+            background: url(../images/online_botbg.jpg) no-repeat;
+            box-shadow: -2px 0 3px rgba(0,0,0,0.25);
+        }
+        .floatShadow
+        {
+            background: #fff;
+            box-shadow: -2px 0 3px rgba(0,0,0,0.25);
+        }
+        /*黄色尖尖的样式*/
+        #rightArrow
+        {
+            width: 50px;
+            height: 45px;
+            background: url(../images/online_arrow.jpg) no-repeat;
+            position: fixed;
+            top: 100px;
+            right: 150px;
+            z-index: 999;
+        }
+        #rightArrow a
+        {
+            display: block;
+            height: 45px;
+        }
+
+        script {
+            display: none;
+        }
+    </style>
+    <!--浮动广告的浮动-->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            var flag=1;
+            $('#rightArrow').click(function(){
+                if(flag==1){
+                    $("#floatDivBoxs").animate({right: '-175px'},300);
+                    $(this).animate({right: '-5px'},300);
+                    $(this).css('background-position','-50px 0');
+                    flag=0;
+                }else{
+                    $("#floatDivBoxs").animate({right: '0'},300);
+                    $(this).animate({right: '150px'},300);
+                    $(this).css('background-position','0px 0');
+                    flag=1;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<!--浮动广告,第一个div是黄色的尖尖，第二个人div是整个浮动块-->
+<div id="rightArrow" style="right: 150px; background-position: 0px 0px;">
+    <a href="javascript:;" title="联系我们"></a>
+</div>
+<div id="floatDivBoxs" style="right: 0px;">
+    <div class="floatDtt">联系我们</div>
+    <div class="floatShadow">
+        <ul class="floatDqq">
+            <li style="padding-left: 0px;"><a href="http://www.sxacc.cn/Question/QuestionPut.aspx">QQ:43781246874</a></li>
+            <li style="padding-left: 0px;"><a href="http://www.sxacc.cn/Question/QuestionPut.aspx">电话:12323434</a></li>
+        </ul>
+        <br/>
+        <br/>
+        <div style="text-align: center; padding: 10px; background: #EBEBEB;">
+            <img src="../images/erweimagr.jpg" width="128px"><br>
+            微信客服
+            <img src="../images/erweima.jpg" width="128px"><br>
+            微信公众账号
+        </div>
+    </div>
+    <div class="floatDbg">
+    </div>
+</div>
+</div>
+<!--浮动-->
+<div class="header">
+    <div class="container" style="padding-left: 0px; padding-right: 0px;">
+        <div class="header_top">
+            <div class="pull-left header_top_left">
+                欢迎您来到在线学习平台!
+            </div>
+            <div class="pull-right header_top_right">
+                <span id="ctl09_loginstate" class="header_top_login" style="font-size:14px;">欢迎您：<span
+                        id="username"></span></span>
+                <a href="myCourse.html" class="header_top_login" style=" margin-left:20px;">个人中心</a>|&nbsp&nbsp&nbsp&nbsp
+                <a href="javascript:;" onclick="logout()" class="">退出</a><a href="" class="header_top_phone"><i
+                    class="icon iconfont icon-dianhua"></i>&nbsp&nbsp客服电话:0351-7210826</a>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="pull-left logo">
+                <h1>
+                    <img src="" alt=""></h1>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="box content">
+        <div class="content-lf">
+            <ul>
+                <li><a href="myCourse.html" class="content-lf-icon1">我的课程</a></li>
+                <li><a href="courseCenter.html" class="content-lf-icon2">选课中心</a></li>
+                <li><a href="myExam.html" class="content-lf-icon3">考试中心</a></li>
+                <li><a href="studyReport.html" class="content-lf-icon4">学分报告</a></li>
+                <li><a href="myMessage.html" class="content-lf-icon5">我的问题</a></li>
+                <li><a href="#" class="content-lf-icon7">我的订单</a></li>
+                <li><a href="myAnswer.html" class="content-lf-icon6">提交工单</a></li>
+                <li><a href="perInfo.html" class="content-lf-icon8">基本信息</a></li>
+            </ul>
+        </div>
+        <div class="content-rg">
+            <div class="xxbg">
+                <div class="xxbg-top">
+                    <span class="span1">基本信息 </span>
+                </div>
+                <div class="inner-rg-main1">
+                    <form action="">
+                        <div class="message-box look">
+                            <div class="message-new">
+                                <div>
+                                    <input type="hidden" name="stuId" class="form-control" style="width: 200px">
+                                </div>
+                                <div class="message">
+                                    <h2>
+                                        姓名</h2>
+                                    <input type="text" class="ipt" name="stuName" id="name" value="请输入姓名" onblur="" readonly="readonly">
+                                </div>
+                                <div class="message">
+                                    <h2>
+                                        身份证号</h2>
+                                    <input type="text" class="ipt" name="idcard" id="card" value="请输入身份证号" readonly="readonly">
+                                </div>
+                                <div class="message">
+                                    <h2>
+                                        所在单位</h2>
+                                    <input type="text" class="ipt" name="company" id="address" value="请输入地址">
+                                </div>
+                                <div class="message">
+                                    <h2>
+                                        手机号</h2>
+                                    <input type="text" class="ipt" name="phoneNum" id="mobile" value="请输入手机号">
+
+
+                                </div>
+
+                                <div class="message">
+                                    <p id="p_msg" class="tl f26 mt30 ml30 mb20"
+                                       style="color: #ff0000; margin-left:114px; margin-bottom:30px;"></p>
+                                    <input type="button" class="bdsj-link" style=" margin-left:100px;" id="sub" value="保存信息">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="yztx">
+                        请如实填写您的手机号，继续教育完成会以短信的形式通知您！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    /*var id = 1*/
+    // 郝彦杰
+    //id = location.href.split("?")[1].split("=")[1]
+    $.get('/student/getUserName', function (r) {
+        console.log(r)
+        $('[name=stuId]').val(r.data.student.stuId)
+        $('[name=stuName]').val(r.data.student.stuName)
+        $('[name=idcard]').val(r.data.student.idcard)
+        $('[name=phoneNum]').val(r.data.student.phoneNum)
+        $('[name=company]').val(r.data.student.company)
+    }, 'json')
+    //袁帅
+    $('#sub').click(function (e) {
+        // window.event.returnValue = false;
+            e.preventDefault();
+
+        $.post('/student/update', $('form').serialize(), function (r) {
+console.log(r)
+            if (r.flag) {
+                alert('修改成功')
+            } else {
+                alert('修改失败')
+            }
+        }, 'json')
+        window.location.reload()
+    })
+</script>
+<script>
+    $.get("/student/getUserName",function (r) {
+        $("#username").html(r.data.student.stuName+"&nbsp;&nbsp;");
+
+    })  ;
+
+</script>
+<script>
+
+    function logout() {
+
+        if(confirm("是否退出?")){
+
+            $.get('/student/logout',function (r) {
+
+                if(r.code==0){
+
+                    window.location.href="./login.html";
+                }
+
+            },'json')
+        }
+    }
+</script>
+</html>

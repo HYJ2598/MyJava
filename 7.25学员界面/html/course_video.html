@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>播放大厅-太原杰威培训学校</title>
+    <!--webSiteCss-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/PcSite.css"/>
+    <link rel="stylesheet" href="../css/animate.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/course_video.css"/>
+    <!--webSiteJs-->
+    <link rel="stylesheet" href="../js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="../js/jquery-3.3.1.js"/>
+    <link rel="stylesheet" href="../js/script.js"/>
+</head>
+<body>
+<div class="header" >
+    <font class="header_word">太原杰威培训学校</font>
+</div>
+<div class=" container">
+    <div class="row">
+        <!-- 左侧:标题栏和视频播放-->
+        <div class="col-lg-8 col-md-8 col-sm-8 bg">
+            <!-- 标题栏-->
+            <div class="video_title">
+                <a href="myCourse.html" class="video_title_btn">返回</a>
+                <input type="text" name="视频题目" value="视频题目" class="video_title_txt" />
+            </div>
+            <!-- 视频播放-->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 bg">
+                    <video
+                            id="my-video"
+                            controls
+                            preload="meta"
+                            height="70%"
+                            width="100%"
+                            autoplay="autoplay"
+                            data-setup="{}"
+                            >
+                        <source src="../video/1.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧:视频列表和讲义下载-->
+        <div class="col-lg-4 col-md-4 col-sm-4 bg">
+            <!-- 课程目录 讲义-->
+            <div class="video_list">
+                <iframe src="video_list_top.html" name="top" width="99%"height="57px" frameborder="0">
+                </iframe>
+                <iframe src="course_content.html" name="right_mid" width="99%" height="475px" frameborder="0">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+
+</div>
+<script type="text/javascript">
+    var video = document.getElementById("my-video");
+    var last = 0;
+    //当目前的播放位置已更改时
+    video.ontimeupdate = function() {
+        var current = video.currentTime;
+        if (current - last > 2) {
+            video.currentTime = last;
+            alert('不可以快进')
+        } else {
+            last = current;
+        }
+    };
+</script>
+</body>
+</html>

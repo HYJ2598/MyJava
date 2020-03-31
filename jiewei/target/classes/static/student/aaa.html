@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="video" style="width: 600px; height: 400px;"></div>
+</body>
+<script src="../js/ckplayer.js"></script>
+<script>
+    var videoObject = {
+        container: '#video', //容器的ID或className
+        variable: 'player', //播放函数名称
+        loaded: 'loadedHandler', //当播放器加载后执行的函数
+        autoplay: true,
+        video: '/upload/32f5fa7f-b8ed-48d8-82f4-3c9e9ab8ec1c.mp4',
+    };
+
+    player = new ckplayer(videoObject);
+
+</script>
+</html>

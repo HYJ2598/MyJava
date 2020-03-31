@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<button type="button" class="layui-btn" id="test1"><i class="layui-icon"></i>上传视频</button>
+<input type="text" name="path">
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use('upload', function(){
+        var upload = layui.upload
+        var $ =layui.jquery
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#test1' //绑定元素
+            ,url: '/upload' //上传接口
+            ,accept:'file'
+            ,done: function(res){
+                //上传完毕回调
+                console.log(res)
+                $('[name=path]').val(res.data.src)
+                //如果上传失败
+                if(res.code > 0){
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+    });
+</script>
+</body>
+</html>
